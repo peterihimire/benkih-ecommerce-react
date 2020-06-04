@@ -11,13 +11,13 @@ function Banner() {
             <div className="grid-text">
               <p>
                 <span>
-                  deal of <strong> the day </strong>
+                  Deal of <strong> the Day </strong>
                 </span>
               </p>
             </div>
-            <div>
-              <Link>view all</Link>
-              <Link>buy now</Link>
+            <div className="btn-container">
+              <Link className="btn dark">view all</Link>
+              <Link className="btn">buy now</Link>
             </div>
           </div>
           <div className="right-grid">

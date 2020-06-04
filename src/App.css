@@ -1,7 +1,7 @@
 :root {
   font-size: 62.5%;
   --primaryColor: #202020;
-  --secondaryColor: #d4d3d3;
+  --secondaryColor: #eeeded;
   --mainGrey: #fafafa;
   --mainWhite: #ffffff;
   --mainBlack: #444444;
@@ -31,6 +31,16 @@ body {
   overflow-x: hidden;
   color: var(--mainBlack);
   font-size: 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  body {
+    padding: 153.5px 0 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--mainWhite);
+    overflow-x: hidden;
+    color: var(--mainBlack);
+    font-size: 1.6rem;
+  }
 }
 /* end of globals */
 
@@ -117,7 +127,7 @@ body {
   .navbar-center {
     max-width: 117rem;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 4rem 2rem;
   }
   .navbar-links {
     height: auto;
@@ -190,7 +200,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .defaultHero {
-    min-height: calc(100vh - 93.5px);
+    min-height: calc(100vh - 153.5px);
     background: var(--secondaryColor) center/cover no-repeat;
     display: flex;
     justify-content: center;
@@ -206,7 +216,7 @@ body {
   padding: 4rem 4rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-row-gap: 3rem;
   grid-column-gap: 3rem;
   /* display: flex;
@@ -216,8 +226,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: flex-start; */
   text-align: center;
+  padding: 0 4rem;
 }
 .right-grid {
   display: flex;
@@ -227,13 +237,55 @@ body {
 }
 .grid-text {
   font-size: var(--smallFont);
+  border-bottom: solid 0.2rem var(--mainBlack);
+  padding: 0 0 2rem 0;
 }
+.btn-container {
+  padding: 4rem 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  padding: 0.5rem 2rem;
+  border: solid 0.2rem var(--mainBlack);
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--mainBlack);
+  font-size: 1.4rem;
+  background: transparent;
+  text-transform: uppercase;
+}
+.dark {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+}
+
 @media screen and (min-width: 768px) {
+  .grid-text {
+    font-size: var(--mediumFont);
+  }
+  .left-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 8rem;
+  }
   .right-grid {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0 0rem 0 0;
+  }
+  .btn {
+    padding: 1rem 4rem;
+    border: solid 0.2rem var(--mainBlack);
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--mainBlack);
+    font-size: 1.6rem;
+    background: transparent;
+    text-transform: uppercase;
   }
 }
 /* end of banner */
