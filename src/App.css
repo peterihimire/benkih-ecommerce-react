@@ -64,7 +64,8 @@ body {
 }
 .navbar-btn {
   background: none;
-  border: none;
+  border: solid 0.2rem var(--mainBlack);
+  padding: 0.27rem 0.5rem 0rem 0.5rem;
   outline: none;
 }
 .navbar-btn-icon {
@@ -92,6 +93,7 @@ body {
 .navbar-icons {
   display: flex;
   list-style-type: none;
+  align-items: center;
 }
 .navbar-icons a {
   text-decoration: none;
@@ -122,6 +124,8 @@ body {
   .navbar-links {
     height: auto;
     display: flex;
+    /* align-items: center;
+    justify-content: center; */
     /* margin: 0 0 0 1rem; */
   }
   .navbar-links a {
@@ -156,7 +160,7 @@ body {
 .category-div {
   display: flex;
   justify-content: space-between;
-  width: 20rem;
+  width: 12rem;
   /* background: var(--mainGrey); */
 }
 
