@@ -10,7 +10,7 @@ const Navbar = props => {
         <div className="navbar-center">
           <div className="first-nav">
             <div className="navbar-header">
-              <Link className="logo">
+              <Link to="/" className="logo">
                 <strong>
                   ben<span>kih</span>{" "}
                 </strong>
@@ -18,22 +18,26 @@ const Navbar = props => {
             </div>
             <ul className="navbar-links">
               <li className="navbar-item">
-                <Link>home</Link>
+                <Link to="/">home</Link>
               </li>
               <li className="navbar-item">
-                <Link>products</Link>
+                <Link to="/products">products</Link>
               </li>
               <li className="navbar-item">
-                <Link>about</Link>
+                <Link to="/about">about</Link>
               </li>
               <li className="navbar-item">
-                <Link>contact</Link>
+                <Link to="/contact">contact</Link>
               </li>
             </ul>
 
             <ul className="navbar-icons">
               <li className="navbar-items items-btn">
-                <button className="navbar-btn">
+                <button
+                  className="navbar-btn"
+                  type="button"
+                  onClick={props.clicked}
+                >
                   <FaBars className="navbar-btn-icon" />
                 </button>
               </li>

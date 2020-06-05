@@ -14,7 +14,7 @@ const Category = () => {
         </div>
         <div className="category-div">
           {" "}
-          <p>search</p>
+          <p>search...</p>
           <span>
             {" "}
             <FaSearch />
