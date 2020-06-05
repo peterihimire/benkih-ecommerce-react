@@ -58,24 +58,45 @@ class SimpleSlider extends React.Component {
     return (
       <Slider {...settings} className="slider-box">
         <div className="box">
+          <p>
+            $ <span>11</span>{" "}
+          </p>
           <img src={img1} alt="product" />
         </div>
         <div className="box">
+          <p>
+            $ <span>65</span>{" "}
+          </p>
           <img src={img2} alt="product" />
         </div>
         <div className="box">
+          <p>
+            $ <span>35</span>{" "}
+          </p>
           <img src={img3} alt="product" />
         </div>
         <div className="box">
+          <p>
+            $ <span>62</span>{" "}
+          </p>
           <img src={img4} alt="product" />
         </div>
         <div className="box">
+          <p>
+            $ <span>25</span>{" "}
+          </p>
           <img src={img5} alt="product" />
         </div>
         <div className="box">
+          <p>
+            $ <span>85</span>{" "}
+          </p>
           <img src={img6} alt="product" />
         </div>
         <div className="box">
+          <p>
+            $ <span>15</span>{" "}
+          </p>
           <img src={img7} alt="product" />
         </div>
       </Slider>
