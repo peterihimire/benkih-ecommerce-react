@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import MobileNav from "./components/MobileNav";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import { Route, Switch } from "react-router-dom";
 
@@ -24,8 +27,11 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/products" component={Products} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
           <Route component={NotFound} />
         </Switch>
+        <Footer />
       </React.Fragment>
     );
   }
