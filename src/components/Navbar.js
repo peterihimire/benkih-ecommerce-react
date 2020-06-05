@@ -42,21 +42,21 @@ const Navbar = props => {
                 </button>
               </li>
               <li className="navbar-items">
-                <Link>
+                <Link to="">
                   <span>
                     <FaSearch />
                   </span>
                 </Link>
               </li>
               <li className="navbar-items">
-                <Link>
+                <Link to="">
                   <span>
                     <FaUser />
                   </span>
                 </Link>
               </li>
               <li className="navbar-items">
-                <Link>
+                <Link to="">
                   <span>
                     <FaCartPlus />
                   </span>
