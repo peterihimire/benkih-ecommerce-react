@@ -65,8 +65,9 @@ const Navbar = props => {
             </ul>
           </div>
         </div>
-        <Category />
+        {/* <Category /> */}
       </nav>
+      <Category />
     </React.Fragment>
   );
 };
