@@ -7,7 +7,8 @@ const ProductContext = React.createContext();
 //Provider
 class ProductProvider extends Component {
   state = {
-    products: []
+    products: [],
+    detailProduct: {}
   };
   componentDidMount() {
     let products = this.formatData(items);
@@ -19,26 +20,28 @@ class ProductProvider extends Component {
   formatData = items => {
     let tempItems = items.map(item => {
       let id = item.sys.id;
-      let images = item.fields.images.map(image => image.fields.file.url);
+      let image = item.fields.image.fields.file.url;
 
-      let product = { ...item.fields, id, images };
+      let product = { ...item.fields, id, image };
       return product;
     });
     return tempItems;
   };
   getProduct = slug => {
-    let tempProducts = [this.state.products];
-    const product = tempProducts.find(product => {
-      return product.slug === slug;
-    });
-    // console.log(product);
+    // let tempProducts = [this.state.products];
+    const product = this.state.products.find(item => item.slug === slug);
+    console.log(product);
     return product;
   };
-  detailHandler = () => {
-    console.log("Hello from detailHandler");
+  detailHandler = slug => {
+    // console.log("Hello from detailHandler");
+    const product = this.getProduct(slug);
+    this.setState(() => {
+      return { detailProduct: product };
+    });
   };
-  addToCart = () => {
-    console.log("Hello from add to cart");
+  addToCart = slug => {
+    console.log(`Hello from add to cart ${slug}`);
   };
   render() {
     return (

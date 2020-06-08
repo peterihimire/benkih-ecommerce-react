@@ -41,36 +41,13 @@ export default [
         "Internet",
         "Comfortable beds"
       ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img1
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
+      image: {
+        fields: {
+          file: {
+            url: img1
           }
         }
-      ]
+      }
     }
   },
   {
@@ -98,36 +75,13 @@ export default [
         "Internet",
         "Comfortable beds"
       ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
+      image: {
+        fields: {
+          file: {
+            url: img2
           }
         }
-      ]
+      }
     }
   },
   {
@@ -155,36 +109,13 @@ export default [
         "Internet",
         "Comfortable beds"
       ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
+      image: {
+        fields: {
+          file: {
+            url: img3
           }
         }
-      ]
+      }
     }
   },
   {
@@ -212,36 +143,13 @@ export default [
         "Internet",
         "Comfortable beds"
       ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img4
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
+      image: {
+        fields: {
+          file: {
+            url: img4
           }
         }
-      ]
+      }
     }
   },
   {
@@ -269,36 +177,13 @@ export default [
         "Internet",
         "Comfortable beds"
       ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img5
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
+      image: {
+        fields: {
+          file: {
+            url: img5
           }
         }
-      ]
+      }
     }
   },
   {
@@ -326,36 +211,13 @@ export default [
         "Internet",
         "Comfortable beds"
       ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img6
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
+      image: {
+        fields: {
+          file: {
+            url: img6
           }
         }
-      ]
+      }
     }
   },
   {
@@ -383,36 +245,13 @@ export default [
         "Internet",
         "Comfortable beds"
       ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img7
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
+      image: {
+        fields: {
+          file: {
+            url: img7
           }
         }
-      ]
+      }
     }
   },
   {
@@ -440,36 +279,13 @@ export default [
         "Internet",
         "Comfortable beds"
       ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img8
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
+      image: {
+        fields: {
+          file: {
+            url: img8
           }
         }
-      ]
+      }
     }
   },
   {
@@ -497,36 +313,13 @@ export default [
         "Internet",
         "Comfortable beds"
       ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img9
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
+      image: {
+        fields: {
+          file: {
+            url: img9
           }
         }
-      ]
+      }
     }
   },
   {
@@ -554,36 +347,13 @@ export default [
         "Internet",
         "Comfortable beds"
       ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img10
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
+      image: {
+        fields: {
+          file: {
+            url: img10
           }
         }
-      ]
+      }
     }
   },
   {
@@ -611,36 +381,13 @@ export default [
         "Internet",
         "Comfortable beds"
       ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img11
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
+      image: {
+        fields: {
+          file: {
+            url: img11
           }
         }
-      ]
+      }
     }
   },
   {
@@ -668,36 +415,13 @@ export default [
         "Internet",
         "Comfortable beds"
       ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img12
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
+      image: {
+        fields: {
+          file: {
+            url: img12
           }
         }
-      ]
+      }
     }
   },
   {
@@ -725,36 +449,13 @@ export default [
         "Internet",
         "Comfortable beds"
       ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: room1
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
+      image: {
+        fields: {
+          file: {
+            url: img11
           }
         }
-      ]
+      }
     }
   }
 ];

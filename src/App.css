@@ -591,6 +591,8 @@ body {
 }
 .details-title {
   text-align: center;
+  margin: 0 0 2rem 0;
+  text-transform: uppercase;
 }
 .details-container {
   display: grid;
@@ -601,5 +603,21 @@ body {
 .details-center {
   max-width: 1170px;
   margin: 0 auto;
+}
+.details-btn-container {
+  margin: 2rem 0 0 0;
+}
+.back-product-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  margin: 0 0 0 0;
+  text-transform: capitalize;
+}
+.add-incart-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  color: var(--mainWhite);
+  background: var(--primaryColor);
+  text-transform: capitalize;
 }
 /* end of details */

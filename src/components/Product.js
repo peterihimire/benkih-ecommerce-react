@@ -5,27 +5,35 @@ import { ProductConsumer } from "../context";
 import PropTypes from "prop-types";
 
 function Product(props) {
-  const { id, name, price, images, inCart } = props.product;
-  // console.log(id, name, price);
+  const { id, name, price, image, inCart, slug, company } = props.product;
+  console.log(id, name, price, slug, company);
   return (
     <article className="product">
-      <div
-        className="img-container"
-        onClick={() => console.log("img-container clicked")}
-      >
-        <Link to="/details">
-          <img src={images[0]} alt="product" />
-        </Link>
-        <button
-          className="cart-btn"
-          disabled={inCart ? true : false}
-          onClick={() => {
-            console.log("added to the cart");
-          }}
-        >
-          {inCart ? <p disabled>in cart</p> : <FaCartPlus />}
-        </button>
-      </div>
+      <ProductConsumer>
+        {value => {
+          console.log(value);
+          return (
+            <div
+              className="img-container"
+              onClick={() => value.detailHandler(slug)}
+            >
+              <Link to="/details">
+                <img src={image} alt="product" />
+              </Link>
+              <button
+                className="cart-btn"
+                disabled={inCart ? true : false}
+                onClick={() => {
+                  value.addToCart(slug);
+                }}
+              >
+                {inCart ? <p disabled>in cart</p> : <FaCartPlus />}
+              </button>
+            </div>
+          );
+        }}
+      </ProductConsumer>
+
       <div className="product-footer">
         <p>{name}</p>
         <h3>
