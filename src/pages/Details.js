@@ -27,32 +27,26 @@ const Details = () => {
               </div>
               <div className="details-container">
                 <div className="details-img">
-                  <img
-                    src={image}
-                    alt="product"
-                    // height="700px"
-                    width="100%"
-                  />
+                  <img src={image} alt="product" width="100%" />
                 </div>
                 <div className="details-info">
-                  <h3>Model: {name}</h3>
-                  <h5>
+                  <h3 className="details-model">
+                    model : <span>{name}</span>
+                  </h3>
+                  <h5 className="details-made">
                     made by : <span>{company}</span>
                   </h5>
-                  <h5>
+                  <h5 className="details-price">
                     <strong>
                       price : <span>$</span>
                       {price}
                     </strong>
                   </h5>
-                  <p>
-                    <strong>some info about product :</strong>
-                  </p>
+                  <h4>some info about product :</h4>
                   <p>{description}</p>
                   <div className="details-btn-container">
                     <Link to="/products">
                       <button className="btn back-product-btn">
-                        {" "}
                         back to products
                       </button>
                     </Link>

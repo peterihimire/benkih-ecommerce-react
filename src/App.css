@@ -424,6 +424,7 @@ body {
 .follow-links-footer {
   display: flex;
   list-style-type: none;
+  padding: 1rem 0;
 }
 .follow-links-footer .follow-icon-footer {
   color: var(--mainWhite);
@@ -591,7 +592,7 @@ body {
 }
 .details-title {
   text-align: center;
-  margin: 0 0 2rem 0;
+  margin: 0 0 3rem 0;
   text-transform: uppercase;
 }
 .details-container {
@@ -619,5 +620,11 @@ body {
   color: var(--mainWhite);
   background: var(--primaryColor);
   text-transform: capitalize;
+}
+.details-info h5 {
+  margin: 0.5rem 0;
+}
+.details-info h4 {
+  margin: 0 0 0.5rem 0;
 }
 /* end of details */
