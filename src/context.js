@@ -26,6 +26,14 @@ class ProductProvider extends Component {
     });
     return tempItems;
   };
+  getProduct = slug => {
+    let tempProducts = [this.state.products];
+    const product = tempProducts.find(product => {
+      return product.slug === slug;
+    });
+    // console.log(product);
+    return product;
+  };
   detailHandler = () => {
     console.log("Hello from detailHandler");
   };
@@ -37,6 +45,7 @@ class ProductProvider extends Component {
       <ProductContext.Provider
         value={{
           ...this.state,
+          getProduct: this.getProduct,
           detailHandler: this.detailHandler,
           addToCart: this.addToCart
         }}

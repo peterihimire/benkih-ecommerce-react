@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaCartPlus } from "react-icons/fa";
 import { ProductConsumer } from "../context";
+import PropTypes from "prop-types";
 
 function Product(props) {
   const { id, name, price, images, inCart } = props.product;
@@ -35,5 +36,14 @@ function Product(props) {
     </article>
   );
 }
+
+Product.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.string,
+    images: PropTypes.array,
+    name: PropTypes.string,
+    inCart: PropTypes.bool
+  }).isRequired
+};
 
 export default Product;
