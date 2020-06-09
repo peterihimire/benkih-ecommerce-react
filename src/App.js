@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import MobileNav from "./components/MobileNav";
 import Footer from "./components/Footer";
+import Modal from "./components/Modal";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import About from "./pages/About";
@@ -25,6 +26,7 @@ class App extends Component {
       <React.Fragment>
         <Navbar clicked={this.toggleHandler} />
         <MobileNav showNav={this.state.isOpen} />
+        <Modal />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/products" component={Products} />

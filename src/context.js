@@ -8,7 +8,10 @@ const ProductContext = React.createContext();
 class ProductProvider extends Component {
   state = {
     products: [],
-    detailProduct: {}
+    detailProduct: {},
+    cart: [],
+    modalOpen: false,
+    modalProduct: {}
   };
   componentDidMount() {
     let products = this.formatData(items);
@@ -41,7 +44,34 @@ class ProductProvider extends Component {
     });
   };
   addToCart = slug => {
-    console.log(`Hello from add to cart ${slug}`);
+    let tempProducts = [...this.state.products];
+    const index = tempProducts.indexOf(this.getProduct(slug));
+    const product = tempProducts[index];
+    product.inCart = true;
+    product.count = 1;
+    const price = product.price;
+    product.total = price;
+
+    this.setState(
+      () => {
+        return { products: tempProducts, cart: [...this.state.cart, product] };
+      },
+      () => {
+        console.log(this.state);
+      }
+    );
+  };
+  openModalHandler = slug => {
+    const product = this.getProduct(slug);
+    this.setState(() => {
+      return { modalProduct: product, modalOpen: true };
+    });
+  };
+
+  closeModalHandler = () => {
+    this.setState(() => {
+      return { modalOpen: false };
+    });
   };
   render() {
     return (
@@ -50,7 +80,9 @@ class ProductProvider extends Component {
           ...this.state,
           getProduct: this.getProduct,
           detailHandler: this.detailHandler,
-          addToCart: this.addToCart
+          addToCart: this.addToCart,
+          openModalHandler: this.openModalHandler,
+          closeModalHandler: this.closeModalHandler
         }}
       >
         {this.props.children}

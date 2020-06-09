@@ -628,3 +628,25 @@ body {
   margin: 0 0 0.5rem 0;
 }
 /* end of details */
+/* modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+.modal-title {
+  text-align: center;
+  padding: 4rem;
+}
+#modal {
+  background: var(--mainWhite);
+}
+/* end of modal */

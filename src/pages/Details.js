@@ -1,6 +1,5 @@
 import React from "react";
 import { ProductConsumer } from "../context";
-// import defaultImg from "../images/room-1.jpeg";
 import { Link } from "react-router-dom";
 
 const Details = () => {
@@ -8,7 +7,6 @@ const Details = () => {
     <ProductConsumer>
       {value => {
         const {
-          id,
           slug,
           name,
           price,
@@ -50,12 +48,12 @@ const Details = () => {
                         back to products
                       </button>
                     </Link>
-
                     <button
                       disabled={inCart ? true : false}
                       className="btn add-incart-btn"
                       onClick={() => {
                         value.addToCart(slug);
+                        value.openModalHandler(slug);
                       }}
                     >
                       {inCart ? "in cart" : "add to cart"}

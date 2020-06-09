@@ -25,6 +25,7 @@ function Product(props) {
                 disabled={inCart ? true : false}
                 onClick={() => {
                   value.addToCart(slug);
+                  value.openModalHandler(slug);
                 }}
               >
                 {inCart ? <p disabled>in cart</p> : <FaCartPlus />}
