@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import MobileNav from "./components/MobileNav";
 import Footer from "./components/Footer";
 import Modal from "./components/Modal";
+import Cart from "./components/Cart";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import About from "./pages/About";
@@ -33,6 +34,7 @@ class App extends Component {
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
           <Route path="/details" component={Details} />
+          <Route path="/cart" component={Cart} />
           <Route component={NotFound} />
         </Switch>
         <Footer />

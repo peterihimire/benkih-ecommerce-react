@@ -611,7 +611,7 @@ body {
 .back-product-btn {
   padding: 0.5rem 1rem;
   font-size: 1.4rem;
-  margin: 0 0 0 0;
+  margin: 0 0 0.5rem 0;
   text-transform: capitalize;
 }
 .add-incart-btn {
@@ -642,11 +642,39 @@ body {
   align-items: center;
   padding: 0 2rem;
 }
-.modal-title {
+.modal-contents {
   text-align: center;
   padding: 4rem;
+  max-width: 70%;
+  margin: 0 auto;
+}
+.modal-contents img {
+  width: 100%;
+}
+.modal-contents h4 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 0 0 1rem 0;
+}
+.modal-contents h5 {
+  padding: 0 0 0.5rem 0;
+  text-transform: capitalize;
+  font-size: 1.8rem;
 }
 #modal {
   background: var(--mainWhite);
+}
+@media screen and (min-width: 768px) {
+  .modal-contents {
+    text-align: center;
+    padding: 4rem;
+    max-width: 40%;
+    margin: 0 auto;
+  }
+  .modal-contents h4 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 0 0 1rem 0;
+  }
 }
 /* end of modal */

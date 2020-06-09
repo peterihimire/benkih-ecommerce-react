@@ -56,7 +56,7 @@ const Navbar = props => {
                 </Link>
               </li>
               <li className="navbar-items">
-                <Link to="">
+                <Link to="/cart">
                   <span>
                     <FaCartPlus />
                   </span>

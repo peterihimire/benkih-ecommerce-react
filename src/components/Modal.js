@@ -17,19 +17,16 @@ export default class Modal extends Component {
             return (
               <div className="modal">
                 <div className="modal-center">
-                  <div id="modal" className="modal-title">
-                    <h5>item added to cart </h5>
-                    <img
-                      src={image}
-                      alt="product"
-                      width="200px"
-                      height="200px"
-                    />
+                  <div id="modal" className="modal-contents">
+                    <h4>item added to cart </h4>
+                    <img src={image} alt="product" />
                     <h5>{name}</h5>
-                    <h5>price : {price}</h5>
+                    <h5>
+                      price : <span>$</span> {price}
+                    </h5>
                     <Link to="/products">
                       <button
-                        className="btn"
+                        className="btn back-product-btn"
                         onClick={() => closeModalHandler()}
                       >
                         continue shopping
@@ -37,7 +34,7 @@ export default class Modal extends Component {
                     </Link>
                     <Link to="/cart">
                       <button
-                        className="btn"
+                        className="btn add-incart-btn"
                         onClick={() => closeModalHandler()}
                       >
                         go to cart
