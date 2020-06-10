@@ -33,7 +33,7 @@ class App extends Component {
           <Route path="/products" component={Products} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
-          <Route path="/details" component={Details} />
+          <Route path="/details/:slug" component={Details} />
           <Route path="/cart" component={Cart} />
           <Route component={NotFound} />
         </Switch>

@@ -16,8 +16,12 @@ function Banner() {
               </p>
             </div>
             <div className="btn-container">
-              <Link className="btn dark">view all</Link>
-              <Link className="btn">buy now</Link>
+              <Link to="/" className="btn dark">
+                view all
+              </Link>
+              <Link to="/" className="btn">
+                buy now
+              </Link>
             </div>
           </div>
           <div className="right-grid">

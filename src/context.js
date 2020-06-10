@@ -64,6 +64,8 @@ class ProductProvider extends Component {
       }
     );
   };
+
+  // Modal Method Handlers
   openModalHandler = slug => {
     const product = this.getProduct(slug);
     this.setState(() => {
@@ -76,6 +78,8 @@ class ProductProvider extends Component {
       return { modalOpen: false };
     });
   };
+
+  // Cart Method Handlers
   incrementHandler = slug => {
     console.log("this is the increment-handler method");
   };

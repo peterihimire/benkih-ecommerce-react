@@ -6,6 +6,17 @@ const Details = () => {
   return (
     <ProductConsumer>
       {value => {
+        console.log(value);
+        if (!value.detailProduct) {
+          return (
+            <div className="error">
+              <h3>no such product could be found...</h3>
+              <Link to="/products" className="btn">
+                back to products
+              </Link>
+            </div>
+          );
+        }
         const {
           slug,
           name,
@@ -16,7 +27,7 @@ const Details = () => {
           image
         } = value.detailProduct;
         console.log(value.detailProduct);
-        console.log(image);
+        // console.log(image);
         return (
           <section className="details">
             <div className="details-center">
