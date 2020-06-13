@@ -16,13 +16,17 @@ const CartItem = props => {
   return (
     <div className="cart-item">
       <div className="cart-item-text">
-        <img src={image} alt="product" width="100px" height="100px" />
+        <img src={image} alt="product" width="80px" height="80px" />
       </div>
       <div className="cart-item-text">
-        <p>{name}</p>
+        <p>
+          <span className="hidden-on-desk">product : </span> {name}
+        </p>
       </div>
       <div className="cart-item-text">
-        <p>{price}</p>
+        <p>
+          <span className="hidden-on-desk">price: </span> <span>$</span> {price}
+        </p>
       </div>
       <div className="cart-item-text">
         <div className="cart-item-btn-group">
@@ -33,11 +37,14 @@ const CartItem = props => {
       </div>
       <div className="cart-item-text">
         <p>
-          <FaTrash />
+          <FaTrash className="fa-trash" />
         </p>
       </div>
       <div className="cart-item-text">
-        <p>{count}</p>
+        <p>
+          <span className="hidden-on-desk">item total :</span> <span>$</span>
+          {price}
+        </p>
       </div>
     </div>
   );
