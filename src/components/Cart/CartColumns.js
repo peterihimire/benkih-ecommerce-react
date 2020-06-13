@@ -8,7 +8,7 @@ const CartColumns = () => {
           <p>products</p>
         </div>
         <div className="cart-columns-item">
-          <p>name of product</p>
+          <p>product name</p>
         </div>
         <div className="cart-columns-item">
           <p>price</p>

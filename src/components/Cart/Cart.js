@@ -2,6 +2,7 @@ import React from "react";
 import CartColumns from "../Cart/CartColumns";
 import EmptyCart from "../Cart/EmptyCart";
 import CartList from "../Cart/CartList";
+import CartTotals from "../Cart/CartTotals";
 import { ProductConsumer } from "../../context";
 
 const Cart = () => {
@@ -33,6 +34,7 @@ const Cart = () => {
                 </div>
                 <CartColumns />
                 <CartList valueProp={value} />
+                <CartTotals />
               </>
             ) : (
               <EmptyCart />

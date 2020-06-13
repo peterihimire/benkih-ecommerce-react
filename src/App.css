@@ -708,7 +708,6 @@ body {
   padding: 1rem 0;
   align-items: center;
   text-transform: capitalize;
-  font-weight: bold;
 }
 .cart-item-btn {
   padding: 0.5rem 1rem;
@@ -716,11 +715,16 @@ body {
   border: solid 2px var(--mainBlack);
   font-weight: bold;
 }
+.cart-item-btn:hover {
+  background: var(--mainBlack);
+  color: var(--mainWhite);
+}
 .cart-item-btn-group {
   padding: 1rem 0;
 }
 .fa-trash {
   color: orange;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .cart-columns-center {

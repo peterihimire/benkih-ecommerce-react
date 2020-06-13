@@ -16,35 +16,49 @@ const CartItem = props => {
   return (
     <div className="cart-item">
       <div className="cart-item-text">
-        <img src={image} alt="product" width="80px" height="80px" />
+        <img
+          src={image}
+          alt="product"
+          style={{ width: "80px", height: "80px" }}
+        />
       </div>
       <div className="cart-item-text">
-        <p>
+        <strong>
           <span className="hidden-on-desk">product : </span> {name}
-        </p>
+        </strong>
       </div>
       <div className="cart-item-text">
-        <p>
+        <strong>
           <span className="hidden-on-desk">price: </span> <span>$</span> {price}
-        </p>
+        </strong>
       </div>
       <div className="cart-item-text">
         <div className="cart-item-btn-group">
-          <span className="cart-item-btn">-</span>
+          <span
+            className="cart-item-btn"
+            onClick={() => decrementHandler(slug)}
+          >
+            -
+          </span>
           <span className="cart-item-btn">{count}</span>
-          <span className="cart-item-btn">+</span>
+          <span
+            className="cart-item-btn"
+            onClick={() => incrementHandler(slug)}
+          >
+            +
+          </span>
         </div>
       </div>
       <div className="cart-item-text">
-        <p>
+        <div onClick={() => removeProductHandler(slug)}>
           <FaTrash className="fa-trash" />
-        </p>
+        </div>
       </div>
       <div className="cart-item-text">
-        <p>
+        <strong>
           <span className="hidden-on-desk">item total :</span> <span>$</span>
           {price}
-        </p>
+        </strong>
       </div>
     </div>
   );
