@@ -5,6 +5,8 @@
   --mainGrey: #fafafa;
   --mainWhite: #ffffff;
   --mainBlack: #444444;
+  --mainRed: #fa0202;
+  --mainOrange: #f5a700;
   --mainTransition: all 0.5s linear;
   --largeFont: 8rem;
   --mediumFont: 5rem;
@@ -723,8 +725,43 @@ body {
   padding: 1rem 0;
 }
 .fa-trash {
-  color: orange;
+  color: var(--mainOrange);
   cursor: pointer;
+}
+.cart-totals {
+  display: flex;
+  justify-content: flex-end;
+}
+.cart-totals-container {
+  background: var(--mainGrey);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.cart-totals-link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+.cart-totals-container h5 {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+.cart-totals-container h5 span {
+  letter-spacing: var(--mainSpacing);
+  font-style: italic;
+}
+.btn-danger {
+  border-color: var(--mainRed);
+  background: var(--mainWhite);
+  color: var(--mainRed);
+}
+.btn-danger:hover {
+  background: var(--mainRed);
+  color: var(--mainWhite);
 }
 @media screen and (min-width: 768px) {
   .cart-columns-center {
@@ -737,7 +774,12 @@ body {
     padding: 0 5rem 0 0;
     width: 100%;
   }
-
+  .cart-totals-container {
+    background: var(--mainGrey);
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
   .cart-item {
     display: flex;
     flex-direction: row;
@@ -748,8 +790,15 @@ body {
     padding: 0 5rem 0 0;
     width: 100%;
   }
+  .cart-totals-container h5 {
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    text-transform: uppercase;
+  }
   .fa-trash {
-    color: orange;
+    color: var(--mainOrange);
   }
   .cart-item-btn {
     padding: 0.8rem 1.3rem;
