@@ -56,7 +56,7 @@ const CartItem = props => {
       <div className="cart-item-text">
         <strong>
           <span className="hidden-on-desk">item total :</span> <span>$</span>
-          {price}
+          {total}
         </strong>
       </div>
     </div>

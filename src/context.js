@@ -96,10 +96,48 @@ class ProductProvider extends Component {
 
   // Cart Method Handlers
   incrementHandler = slug => {
-    console.log("this is the increment-handler method");
+    let tempCart = [...this.state.cart];
+    const selectedProduct = tempCart.find(item => item.slug === slug);
+    const index = tempCart.indexOf(selectedProduct);
+    const product = tempCart[index];
+
+    product.count = product.count + 1;
+    console.log(product.price, product.count, product.total);
+    // product.total = product.price;
+    product.total = product.count * product.price;
+    console.log(product.price, product.count, product.total);
+    this.setState(
+      () => {
+        return { cart: [...tempCart] };
+      },
+      () => {
+        this.addTotals();
+      }
+    );
   };
   decrementHandler = slug => {
-    console.log("this is the decrement-handler method");
+    let tempCart = [...this.state.cart];
+    const selectedProduct = tempCart.find(item => item.slug === slug);
+    const index = tempCart.indexOf(selectedProduct);
+    const product = tempCart[index];
+
+    product.count = product.count - 1;
+    product.total = product.total - product.price;
+    if (product.count === 0) {
+      this.removeProductHandler(slug);
+    } else {
+      product.total = product.count * product.price;
+      this.setState(
+        () => {
+          return {
+            cart: [...tempCart]
+          };
+        },
+        () => {
+          this.addTotals();
+        }
+      );
+    }
   };
   removeProductHandler = slug => {
     let tempProducts = [...this.state.products];
