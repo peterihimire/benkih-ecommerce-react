@@ -55,7 +55,6 @@ class ProductProvider extends Component {
     return product;
   };
   detailHandler = slug => {
-    // console.log("Hello from detailHandler");
     const product = this.getProduct(slug);
     this.setState(() => {
       return { detailProduct: product };
@@ -103,7 +102,25 @@ class ProductProvider extends Component {
     console.log("this is the decrement-handler method");
   };
   removeProductHandler = slug => {
-    console.log("this is the remove-product-handler method");
+    let tempProducts = [...this.state.products];
+    let tempCart = [...this.state.cart];
+
+    tempCart = tempCart.filter(item => item.slug !== slug);
+
+    const index = tempProducts.indexOf(this.getProduct(slug));
+    let removedProduct = tempProducts[index];
+    removedProduct.inCart = false;
+    removedProduct.count = 0;
+    removedProduct.total = 0;
+
+    this.setState(
+      () => {
+        return { cart: [...tempCart], products: [...tempProducts] };
+      },
+      () => {
+        this.addTotals();
+      }
+    );
   };
   clearCartHandler = () => {
     this.setState(
