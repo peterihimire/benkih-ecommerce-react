@@ -8,8 +8,7 @@ const CartItem = props => {
   const {
     incrementHandler,
     decrementHandler,
-    removeProductHandler,
-    clearCartHandler
+    removeProductHandler
   } = valuePassed;
   console.log(id, slug, name, price);
   console.log(itemList, valuePassed);

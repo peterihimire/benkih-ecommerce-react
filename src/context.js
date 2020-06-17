@@ -33,6 +33,21 @@ class ProductProvider extends Component {
     });
     return tempItems;
   };
+  setProduct = () => {
+    let products = this.formatData(items);
+    let tempProducts = [];
+    products.forEach(item => {
+      console.log(item);
+      const singleItem = { ...item };
+      tempProducts = [...tempProducts, singleItem];
+      console.log(tempProducts, singleItem);
+    });
+    this.setState(() => {
+      return {
+        products: tempProducts
+      };
+    });
+  };
   getProduct = slug => {
     // let tempProducts = [this.state.products];
     const product = this.state.products.find(item => item.slug === slug);
@@ -91,7 +106,15 @@ class ProductProvider extends Component {
     console.log("this is the remove-product-handler method");
   };
   clearCartHandler = () => {
-    console.log("this is the clear-cart-handler method");
+    this.setState(
+      () => {
+        return { cart: [] };
+      },
+      () => {
+        this.setProduct();
+        this.addTotals();
+      }
+    );
   };
   addTotals = () => {
     let subTotal = 0;
