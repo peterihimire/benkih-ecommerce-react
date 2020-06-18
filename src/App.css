@@ -538,7 +538,7 @@ body {
   box-shadow: 0.3rem 0.3rem 1rem 0.1rem rgba(122, 121, 121, 0.849);
 }
 .img-container {
-  padding: 2.2rem;
+  padding: 1rem;
 
   position: relative;
   overflow: hidden;

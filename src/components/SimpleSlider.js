@@ -2,13 +2,13 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img1 from "../images/room-1.jpeg";
-import img2 from "../images/room-2.jpeg";
-import img3 from "../images/room-3.jpeg";
-import img4 from "../images/room-4.jpeg";
-import img5 from "../images/room-5.jpeg";
-import img6 from "../images/room-6.jpeg";
-import img7 from "../images/room-7.jpeg";
+import img1 from "../images/product1.png";
+import img2 from "../images/product8.png";
+import img3 from "../images/product3.png";
+import img4 from "../images/product4.png";
+import img5 from "../images/product9.png";
+import img6 from "../images/product6.png";
+import img7 from "../images/product7.png";
 
 // // Custom arrow next and prev buttons
 // const NextArrow = props => {
@@ -59,43 +59,43 @@ class SimpleSlider extends React.Component {
       <Slider {...settings} className="slider-box">
         <div className="box">
           <p>
-            $ <span>11</span>{" "}
+            $ <span>11.99</span>{" "}
           </p>
           <img src={img1} alt="product" />
         </div>
         <div className="box">
           <p>
-            $ <span>65</span>{" "}
+            $ <span>65.99</span>{" "}
           </p>
           <img src={img2} alt="product" />
         </div>
         <div className="box">
           <p>
-            $ <span>35</span>{" "}
+            $ <span>35.99</span>{" "}
           </p>
           <img src={img3} alt="product" />
         </div>
         <div className="box">
           <p>
-            $ <span>62</span>{" "}
+            $ <span>62.99</span>{" "}
           </p>
           <img src={img4} alt="product" />
         </div>
         <div className="box">
           <p>
-            $ <span>25</span>{" "}
+            $ <span>25.99</span>{" "}
           </p>
           <img src={img5} alt="product" />
         </div>
         <div className="box">
           <p>
-            $ <span>85</span>{" "}
+            $ <span>85.99</span>{" "}
           </p>
           <img src={img6} alt="product" />
         </div>
         <div className="box">
           <p>
-            $ <span>15</span>{" "}
+            $ <span>15.99</span>{" "}
           </p>
           <img src={img7} alt="product" />
         </div>
