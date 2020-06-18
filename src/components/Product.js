@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaCartPlus } from "react-icons/fa";
+import { FaCartPlus, FaSearch } from "react-icons/fa";
 import { ProductConsumer } from "../context";
 import PropTypes from "prop-types";
 
@@ -17,8 +17,11 @@ function Product(props) {
               className="img-container"
               onClick={() => value.detailHandler(slug)}
             >
-              <Link to={`/details/${slug}`}>
+              <Link>
                 <img src={image} alt="product" />
+              </Link>
+              <Link to={`/details/${slug}`} className="cart-btn-details">
+                <FaSearch />
               </Link>
               <button
                 className="cart-btn"

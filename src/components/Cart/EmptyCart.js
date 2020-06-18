@@ -1,17 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaAngleLeft } from "react-icons/fa";
 
 const EmptyCart = () => {
   return (
     <div className="empty-cart">
       <div className="empty-cart-center">
-        <div>
-          <h1>your cart is currently empty</h1>
+        <div className="empty-cart-msg">
+          <h1>Your cart is currently empty...</h1>
         </div>
-        <Link to="/products" className="btn add-incart-btn">
+        <Link
+          to="/products"
+          className="btn add-incart-btn continue-shopping-btn"
+        >
           <span>
-            <FaArrowLeft />
+            <FaAngleLeft />
           </span>
           continue shopping
         </Link>
