@@ -1,7 +1,7 @@
 import React from "react";
 import Category from "../components/Category";
 import { Link } from "react-router-dom";
-import { FaBars, FaSearch, FaCartPlus, FaUser } from "react-icons/fa";
+import { FaBars, FaCartPlus, FaUser } from "react-icons/fa";
 
 const Navbar = props => {
   return (
