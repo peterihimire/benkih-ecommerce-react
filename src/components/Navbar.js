@@ -41,24 +41,24 @@ const Navbar = props => {
                   <FaBars className="navbar-btn-icon" />
                 </button>
               </li>
-              <li className="navbar-items">
+              {/* <li className="navbar-items">
                 <Link to="">
                   <span>
-                    <FaSearch />
+                    <FaSearch className="navbar-items-icon" />
                   </span>
                 </Link>
-              </li>
+              </li> */}
               <li className="navbar-items">
                 <Link to="">
                   <span>
-                    <FaUser />
+                    <FaUser className="navbar-items-icon" />
                   </span>
                 </Link>
               </li>
               <li className="navbar-items">
                 <Link to="/cart">
                   <span>
-                    <FaCartPlus />
+                    <FaCartPlus className="navbar-items-icon" />
                   </span>
                 </Link>
               </li>

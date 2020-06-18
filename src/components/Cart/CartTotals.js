@@ -14,7 +14,7 @@ const CartTotals = () => {
             <div className="cart-totals">
               <div className="cart-totals-center">
                 <div className="cart-totals-container">
-                  <Link to="/products" className="cart-totals-link">
+                  {/* <Link to="/products" className="cart-totals-link">
                     <button
                       type="button"
                       className="btn btn-danger"
@@ -22,7 +22,7 @@ const CartTotals = () => {
                     >
                       clear cart
                     </button>
-                  </Link>
+                  </Link> */}
                   <h5>
                     <span>subtotal :</span> <strong>$ {cartSubTotal}</strong>
                   </h5>
