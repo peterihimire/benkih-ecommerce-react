@@ -297,10 +297,10 @@ body {
 .grid-text {
   font-size: var(--smallFont);
   border-bottom: solid 0.2rem var(--mainBlack);
-  padding: 0 0 2rem 0;
+  padding: 0 0 1rem 0;
 }
 .btn-container {
-  padding: 4rem 0 0 0;
+  padding: 2rem 0 0 0;
   display: flex;
   justify-content: center;
 }
@@ -353,6 +353,11 @@ body {
     justify-content: center;
     padding: 0 0rem 0 0;
   }
+  .grid-text {
+    font-size: var(--smallFont);
+    border-bottom: solid 0.2rem var(--mainBlack);
+    padding: 0 0 2rem 0;
+  }
   .btn {
     padding: 1rem 4rem;
     border: solid 0.2rem var(--mainBlack);
@@ -362,6 +367,11 @@ body {
     font-size: 1.6rem;
     background: transparent;
     text-transform: uppercase;
+  }
+  .btn-container {
+    padding: 4rem 0 0 0;
+    display: flex;
+    justify-content: center;
   }
   .dark {
     background: var(--primaryColor);
