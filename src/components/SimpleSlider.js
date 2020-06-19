@@ -4,8 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import img1 from "../images/product1.png";
 import img2 from "../images/product8.png";
-import img3 from "../images/product3.png";
-import img4 from "../images/product4.png";
 import img5 from "../images/product9.png";
 import img6 from "../images/product6.png";
 import img7 from "../images/product7.png";
