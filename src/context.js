@@ -22,6 +22,7 @@ class ProductProvider extends Component {
       products
     });
     console.log(products);
+    // console.log(this.props.match);
   }
   formatData = items => {
     let tempItems = items.map(item => {

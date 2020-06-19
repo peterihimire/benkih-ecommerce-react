@@ -58,46 +58,54 @@ class SimpleSlider extends React.Component {
     return (
       <Slider {...settings} className="slider-box">
         <div className="box">
-          <p>
-            $ <span>11.99</span>{" "}
-          </p>
-          <img src={img1} alt="product" />
+          <div className="box-center">
+            <p>
+              <span>$ 499.99</span>{" "}
+            </p>
+          </div>
+          <div className="slider-img">
+            <img src={img7} alt="product" />
+          </div>
         </div>
         <div className="box">
-          <p>
-            $ <span>65.99</span>{" "}
-          </p>
-          <img src={img2} alt="product" />
+          <div className="box-center">
+            <p>
+              <span>$ 110.99</span>{" "}
+            </p>
+          </div>
+          <div className="slider-img">
+            <img src={img1} alt="product" />
+          </div>
         </div>
         <div className="box">
-          <p>
-            $ <span>35.99</span>{" "}
-          </p>
-          <img src={img3} alt="product" />
+          <div className="box-center">
+            <p>
+              <span>$ 110.99</span>{" "}
+            </p>
+          </div>
+          <div className="slider-img">
+            <img src={img2} alt="product" />
+          </div>
         </div>
         <div className="box">
-          <p>
-            $ <span>62.99</span>{" "}
-          </p>
-          <img src={img4} alt="product" />
+          <div className="box-center">
+            <p>
+              <span>$ 110.99</span>{" "}
+            </p>
+          </div>
+          <div className="slider-img">
+            <img src={img6} alt="product" />
+          </div>
         </div>
         <div className="box">
-          <p>
-            $ <span>25.99</span>{" "}
-          </p>
-          <img src={img5} alt="product" />
-        </div>
-        <div className="box">
-          <p>
-            $ <span>85.99</span>{" "}
-          </p>
-          <img src={img6} alt="product" />
-        </div>
-        <div className="box">
-          <p>
-            $ <span>15.99</span>{" "}
-          </p>
-          <img src={img7} alt="product" />
+          <div className="box-center">
+            <p>
+              <span>$ 110.99</span>{" "}
+            </p>
+          </div>
+          <div className="slider-img">
+            <img src={img5} alt="product" />
+          </div>
         </div>
       </Slider>
     );
