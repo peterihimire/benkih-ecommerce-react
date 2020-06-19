@@ -22,11 +22,19 @@ class App extends Component {
       isOpen: !this.state.isOpen
     });
   };
+  closeHandler = () => {
+    this.setState({
+      isOpen: false
+    });
+  };
   render() {
     return (
       <React.Fragment>
         <Navbar clicked={this.toggleHandler} />
-        <MobileNav showNav={this.state.isOpen} />
+        <MobileNav
+          showOpen={this.state.isOpen}
+          removeClose={this.closeHandler}
+        />
         <Modal />
         <Switch>
           <Route exact path="/" component={Home} />

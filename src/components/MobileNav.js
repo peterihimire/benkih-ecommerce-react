@@ -3,22 +3,32 @@ import { Link } from "react-router-dom";
 
 const MobileNav = props => {
   return (
-    <div className={props.showNav ? "mobile-nav show-nav" : "mobile-nav"}>
-      <ul className="mobile-nav-links">
-        <li className="mobile-nav-item">
-          <Link to="/">home</Link>
-        </li>
-        <li className="mobile-nav-item">
-          <Link to="/products">products</Link>
-        </li>
-        <li className="mobile-nav-item">
-          <Link to="/about">about</Link>
-        </li>
-        <li className="mobile-nav-item">
-          <Link to="/contact">contact</Link>
-        </li>
-      </ul>
-    </div>
+    <>
+      <div
+        className={
+          props.showOpen
+            ? "mobile-nav-overlay transparent-bcg"
+            : "mobile-nav-overlay"
+        }
+        onClick={props.removeClose}
+      />
+      <div className={props.showOpen ? "mobile-nav show-nav" : "mobile-nav"}>
+        <ul className="mobile-nav-links">
+          <li className="mobile-nav-item">
+            <Link to="/">home</Link>
+          </li>
+          <li className="mobile-nav-item">
+            <Link to="/products">products</Link>
+          </li>
+          <li className="mobile-nav-item">
+            <Link to="/about">about</Link>
+          </li>
+          <li className="mobile-nav-item">
+            <Link to="/contact">contact</Link>
+          </li>
+        </ul>
+      </div>
+    </>
   );
 };
 
