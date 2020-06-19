@@ -10,9 +10,7 @@ function Banner() {
           <div className="left-grid">
             <div className="grid-text">
               <p>
-                <span>
-                  Deal of <strong> the Day </strong>
-                </span>
+                Deal of <strong> the Day </strong>
               </p>
             </div>
             <div className="btn-container">

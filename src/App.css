@@ -9,7 +9,7 @@
   --mainOrange: #f5a700;
   --mainTransition: all 0.5s linear;
   --largeFont: 8rem;
-  --mediumFont: 5rem;
+  --mediumFont: 6rem;
   --smallFont: 3rem;
   --mainSpacing: 0.2rem;
   --lineHeight: 1.3;
@@ -337,7 +337,7 @@ body {
   transform: scale(1.3);
 } */
 @media screen and (min-width: 768px) {
-  .grid-text {
+  .grid-text p {
     font-size: var(--mediumFont);
   }
   .left-grid {
