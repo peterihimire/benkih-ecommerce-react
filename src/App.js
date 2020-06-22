@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import Details from "./pages/Details";
 import NotFound from "./pages/NotFound";
 import { Route, Switch } from "react-router-dom";
+import RenderTop from "./components/RenderTop";
 
 class App extends Component {
   state = {
@@ -36,6 +37,7 @@ class App extends Component {
           removeClose={this.closeHandler}
         />
         <Modal />
+        <RenderTop />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/products" component={Products} />
