@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaCartPlus, FaSearch } from "react-icons/fa";
+import { FaCartPlus, FaInfo } from "react-icons/fa";
 import { ProductConsumer } from "../context";
 import PropTypes from "prop-types";
 
@@ -21,7 +21,7 @@ function Product(props) {
                 <img src={image} alt="product" />
               </Link>
               <Link to={`/details/${slug}`} className="cart-btn-details">
-                <FaSearch />
+                <FaInfo />
               </Link>
               <button
                 className="cart-btn"

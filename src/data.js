@@ -29,7 +29,7 @@ export default [
       name: "denim jeans",
       slug: "denim-jeans",
       company: "karl kani",
-      price: 100.99,
+      price: 299.99,
       count: 0,
       total: 0,
       inCart: false,
@@ -197,7 +197,7 @@ export default [
     },
     fields: {
       name: "ray ban 1093c",
-      slug: "ray-ban",
+      slug: "ray-ban-1093c",
       company: "ray ban",
       price: 250.99,
       count: 0,
@@ -400,8 +400,8 @@ export default [
       id: "12"
     },
     fields: {
-      name: "blue-grey pant",
-      slug: "blue-grey-pant",
+      name: "grey pant",
+      slug: "grey-pant",
       company: "armani",
       price: 500.99,
       count: 0,
@@ -502,9 +502,9 @@ export default [
       id: "15"
     },
     fields: {
-      name: "presidential",
-      slug: "presidential-room",
-      company: "LENOVO",
+      name: "denim jacket",
+      slug: "denim-jacket",
+      company: "fubu",
       price: 600.99,
       count: 0,
       total: 0,
@@ -536,9 +536,9 @@ export default [
       id: "16"
     },
     fields: {
-      name: "presidential",
-      slug: "presidential-room",
-      company: "LENOVO",
+      name: "armani 8767s",
+      slug: "armani-8767s",
+      company: "armani",
       price: 600.99,
       count: 0,
       total: 0,
@@ -570,10 +570,10 @@ export default [
       id: "17"
     },
     fields: {
-      name: "presidential",
-      slug: "presidential-room",
-      company: "LENOVO",
-      price: 600.99,
+      name: "sushi 1087c",
+      slug: "sushi-1087b",
+      company: "sushi",
+      price: 59.99,
       count: 0,
       total: 0,
       inCart: false,

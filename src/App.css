@@ -848,7 +848,7 @@ body {
   .modal-contents {
     text-align: center;
     padding: 4rem;
-    max-width: 40%;
+    max-width: 60%;
     margin: 0 auto;
     border-radius: 0.4rem;
   }
@@ -872,6 +872,10 @@ body {
   display: flex;
   justify-content: center;
   padding: 0 0 2rem 0;
+}
+.cart-title h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
 }
 .cart-columns {
   padding: 0 0 2rem 0;
@@ -985,6 +989,10 @@ body {
     padding: 4rem;
     display: flex;
     flex-direction: column;
+  }
+  .cart-title h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
   }
   .cart-item {
     display: flex;
