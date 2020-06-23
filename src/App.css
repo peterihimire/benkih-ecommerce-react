@@ -17,9 +17,9 @@
   --darkShodow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 * {
   margin: 0;
