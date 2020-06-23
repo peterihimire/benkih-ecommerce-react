@@ -1,24 +1,46 @@
 import React, { Component } from "react";
 import Product from "./Product";
 import { ProductConsumer } from "../context";
+import ReactPaginate from "react-paginate";
 
 class ProductList extends Component {
   render() {
     return (
-      <section className="product-list">
-        <div className="product-list-center">
-          <ProductConsumer>
-            {value => {
-              return value.products.map(product => {
-                return <Product key={product.id} product={product} />;
-                // console.log(product);
-              });
-            }}
-          </ProductConsumer>
-        </div>
-      </section>
+      <ProductConsumer>
+        {value => {
+          console.log(value);
+          const { slice, products, pageCount, handlePageClick } = value;
+          console.log(slice, products, pageCount, handlePageClick);
+          return (
+            <section className="product-list">
+              <div className="product-list-center">
+                {slice.map(item => {
+                  return <Product key={item.id} product={item} />;
+                })}
+              </div>
+              <ReactPaginate
+                previousLabel={"prev"}
+                nextLabel={"next"}
+                breakLabel={"..."}
+                breakClassName={"break-me"}
+                pageCount={pageCount}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={5}
+                onPageChange={handlePageClick}
+                containerClassName={"pagination"}
+                subContainerClassName={"pages pagination"}
+                activeClassName={"active"}
+              />
+            </section>
+          );
+        }}
+      </ProductConsumer>
     );
   }
 }
 
 export default ProductList;
+
+// {return slice.map(product => {
+//                   return <Product key={product.id} product={product} />;
+//                 })

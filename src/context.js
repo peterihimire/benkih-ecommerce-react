@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import items from "./data";
+// import items from "./data";
+import Client from "./Contentful";
+
+// Client.getEntries({
+//   content_type: "benkihStore"
+// }).then(response => console.log(response.items));
 
 //Create context
 const ProductContext = React.createContext();
@@ -9,7 +14,7 @@ class ProductProvider extends Component {
   state = {
     offset: 0,
     products: [],
-    perPage: 6,
+    perPage: 5,
     currentPage: 0,
     slice: [],
     detailProduct: {},
@@ -18,15 +23,34 @@ class ProductProvider extends Component {
     modalProduct: {},
     cartSubTotal: 0,
     cartTax: 0,
-    cartTotal: 0
+    cartTotal: 0,
+    loading: true
+  };
+  getData = async () => {
+    try {
+      let response = await Client.getEntries({
+        content_type: "benkihStore",
+        order: "sys.createdAt"
+      });
+      let products = this.formatData(response.items);
+      const slice = products.slice(
+        this.state.offset,
+        this.state.offset + this.state.perPage
+      );
+      console.log(slice);
+      this.setState({
+        products,
+        loading: false,
+        slice,
+        pageCount: Math.ceil(products.length / this.state.perPage)
+      });
+      console.log(products);
+    } catch (error) {
+      console.log(error);
+    }
   };
   componentDidMount() {
-    let products = this.formatData(items);
-    this.setState({
-      products
-    });
-    console.log(products);
-    // console.log(this.props.match);
+    this.getData();
   }
   formatData = items => {
     let tempItems = items.map(item => {
@@ -39,7 +63,7 @@ class ProductProvider extends Component {
     return tempItems;
   };
   setProduct = () => {
-    let products = this.formatData(items);
+    let products = this.getData();
     let tempProducts = [];
     products.forEach(item => {
       console.log(item);
@@ -190,6 +214,20 @@ class ProductProvider extends Component {
       };
     });
   };
+  handlePageClick = e => {
+    const selectedPage = e.selected;
+    const offset = selectedPage * this.state.perPage;
+
+    this.setState(
+      {
+        currentPage: selectedPage,
+        offset: offset
+      },
+      () => {
+        this.getData();
+      }
+    );
+  };
   render() {
     return (
       <ProductContext.Provider
@@ -203,7 +241,8 @@ class ProductProvider extends Component {
           incrementHandler: this.incrementHandler,
           decrementHandler: this.decrementHandler,
           removeProductHandler: this.removeProductHandler,
-          clearCartHandler: this.clearCartHandler
+          clearCartHandler: this.clearCartHandler,
+          handlePageClick: this.handlePageClick
         }}
       >
         {this.props.children}

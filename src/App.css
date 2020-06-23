@@ -671,7 +671,7 @@ body {
   max-width: 1170px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   grid-row-gap: 2rem;
   grid-column-gap: 30px;
 }
@@ -1046,3 +1046,44 @@ body {
   }
 }
 /* end of cart */
+/* pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem auto;
+  list-style-type: none;
+  outline: none;
+}
+.pagination > .active > a {
+  background-color: var(--primaryColor);
+  color: var(--mainWhite);
+  border-color: var(--primaryColor);
+}
+.pagination > li > a {
+  border: solid 1px var(--mainBlack);
+  padding: 0.5rem 1rem;
+  outline: none;
+  cursor: pointer;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background: var(--primaryColor);
+  border-color: var(--mainBlack);
+  outline: none;
+}
+.pagination > li > a,
+.pagination > li > span {
+  color: var(--primaryColor);
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span,
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  color: var(--mainBlack);
+  border-radius: unset;
+}
+/* end of pagination */
