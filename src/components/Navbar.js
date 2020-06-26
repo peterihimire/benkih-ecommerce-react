@@ -1,6 +1,6 @@
 import React from "react";
 import Category from "../components/Category";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaCartPlus, FaUser } from "react-icons/fa";
 
 const Navbar = props => {
@@ -18,16 +18,41 @@ const Navbar = props => {
             </div>
             <ul className="navbar-links">
               <li className="navbar-item">
-                <Link to="/">home</Link>
+                <NavLink
+                  exact
+                  activeClassName="active"
+                  className="navbar-single-link"
+                  to="/"
+                >
+                  home
+                </NavLink>
               </li>
               <li className="navbar-item">
-                <Link to="/products">products</Link>
+                <NavLink
+                  activeClassName="active"
+                  className="navbar-single-link"
+                  to="/products"
+                >
+                  products
+                </NavLink>
               </li>
               <li className="navbar-item">
-                <Link to="/about">about</Link>
+                <NavLink
+                  activeClassName="active"
+                  className="navbar-single-link"
+                  to="/about"
+                >
+                  about
+                </NavLink>
               </li>
               <li className="navbar-item">
-                <Link to="/contact">contact</Link>
+                <NavLink
+                  activeClassName="active"
+                  className="navbar-single-link"
+                  to="/contact"
+                >
+                  contact
+                </NavLink>
               </li>
             </ul>
 

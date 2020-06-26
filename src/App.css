@@ -1,6 +1,6 @@
 :root {
   font-size: 62.5%;
-  --primaryColor: #202020;
+  --primaryColor: #38304d;
   --secondaryColor: #eeeded;
   --mainGrey: #fafafa;
   --mainWhite: #ffffff;
@@ -73,18 +73,19 @@ body {
   font-size: var(--smallFont);
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--mainBlack);
+  color: var(--primaryColor);
   letter-spacing: var(--mainSpacing);
 }
 .navbar-btn {
   background: none;
-  border: solid 0.2rem var(--mainBlack);
+  border: solid 0.2rem var(--primaryColor);
   border-radius: 0.4rem;
   padding: 0.27rem 0.5rem 0rem 0.5rem;
   outline: none;
 }
 .navbar-btn-icon {
   font-size: 2rem;
+  color: var(--primaryColor);
 }
 .navbar-links {
   height: 0;
@@ -143,7 +144,7 @@ body {
 }
 .mobile-nav-links a {
   text-decoration: none;
-  color: var(--mainBlack);
+  color: var(--primaryColor);
   font-weight: bold;
 }
 .show-nav {
@@ -158,10 +159,45 @@ body {
 .navbar-icons a {
   text-decoration: none;
   margin: 0 0 0 2rem;
-  color: var(--mainBlack);
+  color: var(--primaryColor);
 }
+
 .navbar-items-icon {
   font-size: 1.8rem;
+}
+.navbar-single-link {
+  background: none;
+  padding: 0.5rem 0rem;
+  font-size: 1.6rem;
+  font-weight: 540;
+  text-decoration: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  color: var(--mainBlack);
+  display: flex;
+  position: relative;
+  white-space: nowrap;
+  transition: var(--mainTransition);
+  margin: 0 0 0 2rem;
+}
+.navbar-single-link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 2.5px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: var(--mainTransition);
+  background-color: var(--primaryColor);
+}
+
+.navbar-single-link,
+.active:after,
+.navbar-single-link:hover:after {
+  transform-origin: right;
+  transform: scale(1);
 }
 @media screen and (min-width: 768px) {
   .navbar {
@@ -191,21 +227,37 @@ body {
     margin: 0 2rem;
     padding: 0.5rem 0;
     font-weight: bold;
+    color: var(--primaryColor);
   }
   .navbar-icons {
     display: flex;
     list-style-type: none;
   }
+  .navbar-single-link {
+    background: none;
+    padding: 1rem 0rem;
+    font-size: 1.6rem;
+    font-weight: 540;
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: var(--primaryColor);
+    display: flex;
+    position: relative;
+    white-space: nowrap;
+    transition: var(--mainTransition);
+    margin: 0 0 0 2rem;
+  }
   .navbar-icons a {
     text-decoration: none;
     margin: 0 0 0 2rem;
-    color: var(--mainBlack);
+    color: var(--primaryColor);
   }
   .logo {
     font-size: 4rem;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--mainBlack);
+    color: var(--primaryColor);
     letter-spacing: var(--mainSpacing);
   }
 }
@@ -330,7 +382,7 @@ body {
   text-transform: uppercase;
 }
 .dark {
-  background: var(--primaryColor);
+  background: var(--mainBlack);
   color: var(--mainWhite);
 }
 .box {
@@ -398,7 +450,7 @@ body {
     justify-content: center;
   }
   .dark {
-    background: var(--primaryColor);
+    background: var(--mainBlack);
     color: var(--mainWhite);
   }
   .box {
@@ -457,7 +509,6 @@ body {
 
 /* Footer */
 .footer {
-  /* background: var(--mainBlack); */
   padding: 6rem 2rem;
   color: var(--mainBlack);
 }
@@ -472,14 +523,13 @@ body {
 }
 .footer-item a {
   text-decoration: none;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: var(--mainBlack);
 }
 .footer-item span {
   padding: 0 0 0 1rem;
 }
 .summary {
-  /* background: var(--mainBlack); */
   border-bottom: solid 0.1rem var(--secondaryColor);
   padding: 0 0 6rem 0;
   color: var(--mainBlack);
@@ -502,27 +552,27 @@ body {
 .follow-links-footer .follow-icon-container-footer1 {
   background: #3b5998;
   padding: 0.3rem 0.3rem;
-  border-radius: 0.1rem;
+  border-radius: 0.3rem;
 }
 .follow-links-footer .follow-icon-container-footer2 {
   background: #55acee;
   padding: 0.3rem 0.3rem;
-  border-radius: 0.1rem;
+  border-radius: 0.3rem;
 }
 .follow-links-footer .follow-icon-container-footer3 {
   background: #e95950;
   padding: 0.3rem 0.3rem;
-  border-radius: 0.1rem;
+  border-radius: 0.3rem;
 }
 .follow-links-footer .follow-icon-container-footer4 {
   background: #007bb5;
   padding: 0.3rem 0.3rem;
-  border-radius: 0.1rem;
+  border-radius: 0.3rem;
 }
 .follow-links-footer .follow-icon-container-footer5 {
   background: #04669a;
   padding: 0.3rem 0.3rem;
-  border-radius: 0.1rem;
+  border-radius: 0.3rem;
 }
 .follow-container-footer {
   margin: 0 1rem 0 0;
@@ -1062,6 +1112,7 @@ body {
 .pagination > li > a {
   border: solid 1px var(--mainBlack);
   padding: 0.5rem 1rem;
+  margin: 0 0.1rem;
   outline: none;
   cursor: pointer;
 }
@@ -1080,10 +1131,31 @@ body {
   color: var(--primaryColor);
 }
 .pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  border-radius: 3px 0 0 3px;
+}
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-radius: 0 3px 3px 0;
+}
+.pagination > li:first-child > a,
 .pagination > li:first-child > span,
 .pagination > li:last-child > a,
 .pagination > li:last-child > span {
   color: var(--mainBlack);
-  border-radius: unset;
+  /* text-transform: uppercase; */
+  /* border-radius: unset; */
 }
 /* end of pagination */
+/* loading */
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  text-transform: capitalize;
+  color: var(--primaryColor);
+}
+/* end of loading */

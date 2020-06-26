@@ -21,10 +21,10 @@ function footer() {
               <h4>products</h4>
               <ul>
                 <li>
-                  <Link to="">price drop</Link>
+                  <Link to="">Price drop</Link>
                 </li>
                 <li>
-                  <Link to="">new products</Link>
+                  <Link to="">New products</Link>
                 </li>
                 <li>
                   <Link to="">Best sales</Link>
@@ -32,25 +32,22 @@ function footer() {
                 <li>
                   <Link to="">Contact us</Link>
                 </li>
-                <li>
-                  <Link to="">Sitemap</Link>
-                </li>
               </ul>
             </div>
             <div className="footer-item">
               <h4>our company</h4>
               <ul>
                 <li>
-                  <Link to="">delivery</Link>
+                  <Link to="">Delivery</Link>
                 </li>
                 <li>
                   <Link to="">Legal notice</Link>
                 </li>
                 <li>
-                  <Link to="">about us</Link>
+                  <Link to="">About us</Link>
                 </li>
                 <li>
-                  <Link to="">secure payment</Link>
+                  <Link to="">Secure payment</Link>
                 </li>
               </ul>
             </div>
@@ -58,7 +55,7 @@ function footer() {
               <h4>customer service</h4>
               <ul>
                 <li>
-                  <Link to="">new products</Link>
+                  <Link to="">New products</Link>
                 </li>
                 <li>
                   <Link to="">Best sales</Link>

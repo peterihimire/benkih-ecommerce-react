@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const MobileNav = props => {
   return (
@@ -15,16 +15,41 @@ const MobileNav = props => {
       <div className={props.showOpen ? "mobile-nav show-nav" : "mobile-nav"}>
         <ul className="mobile-nav-links">
           <li className="mobile-nav-item">
-            <Link to="/">home</Link>
+            <NavLink
+              exact
+              activeClassName="active"
+              className="navbar-single-link"
+              to="/"
+            >
+              home
+            </NavLink>
           </li>
           <li className="mobile-nav-item">
-            <Link to="/products">products</Link>
+            <NavLink
+              activeClassName="active"
+              className="navbar-single-link"
+              to="/products"
+            >
+              products
+            </NavLink>
           </li>
           <li className="mobile-nav-item">
-            <Link to="/about">about</Link>
+            <NavLink
+              activeClassName="active"
+              className="navbar-single-link"
+              to="/about"
+            >
+              about
+            </NavLink>
           </li>
           <li className="mobile-nav-item">
-            <Link to="/contact">contact</Link>
+            <NavLink
+              activeClassName="active"
+              className="navbar-single-link"
+              to="/contact"
+            >
+              contact
+            </NavLink>
           </li>
         </ul>
       </div>
