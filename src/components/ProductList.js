@@ -55,7 +55,3 @@ class ProductList extends Component {
 }
 
 export default ProductList;
-
-// {return slice.map(product => {
-//                   return <Product key={product.id} product={product} />;
-//                 })

@@ -26,29 +26,51 @@ class ProductProvider extends Component {
     cartTotal: 0,
     loading: true
   };
-  getData = async () => {
-    try {
-      let response = await Client.getEntries({
+  // getData = async () => {
+  //   try {
+  //     let response = await Client.getEntries({
+  //       content_type: "benkihStore",
+  //       order: "sys.createdAt"
+  //     });
+  //     let products = this.formatData(response.items);
+  //     const slice = products.slice(
+  //       this.state.offset,
+  //       this.state.offset + this.state.perPage
+  //     );
+  //     console.log(slice);
+  //     this.setState({
+  //       products,
+  //       loading: false,
+  //       slice,
+  //       pageCount: Math.ceil(products.length / this.state.perPage)
+  //     });
+  //     console.log(products);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+  getData = () =>
+    fetch(
+      Client.getEntries({
         content_type: "benkihStore",
         order: "sys.createdAt"
-      });
-      let products = this.formatData(response.items);
-      const slice = products.slice(
-        this.state.offset,
-        this.state.offset + this.state.perPage
-      );
-      console.log(slice);
-      this.setState({
-        products,
-        loading: false,
-        slice,
-        pageCount: Math.ceil(products.length / this.state.perPage)
-      });
-      console.log(products);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+      })
+        .then(response => response.items)
+        .then(products => this.formatData(products))
+        .then(slice =>
+          slice.slice(this.state.offset, this.state.offset + this.state.perPage)
+        )
+        .then((data, slice) =>
+          this.setState({
+            slice,
+            loading: false,
+            data,
+            pageCount: Math.ceil(slice.length / this.state.perPage)
+          })
+        )
+        .catch(error => console.log(error))
+    );
+
   componentDidMount() {
     this.getData();
   }
