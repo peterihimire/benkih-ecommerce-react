@@ -57,17 +57,19 @@ class ProductProvider extends Component {
       })
         .then(response => response.items)
         .then(products => this.formatData(products))
-        .then(slice =>
-          slice.slice(this.state.offset, this.state.offset + this.state.perPage)
-        )
-        .then((data, slice) =>
+        .then(products => {
+          const slice = products.slice(
+            this.state.offset,
+            this.state.offset + this.state.perPage
+          );
           this.setState({
-            slice,
+            products,
             loading: false,
-            data,
-            pageCount: Math.ceil(slice.length / this.state.perPage)
-          })
-        )
+            slice,
+            pageCount: Math.ceil(products.length / this.state.perPage)
+          });
+        })
+
         .catch(error => console.log(error))
     );
 
