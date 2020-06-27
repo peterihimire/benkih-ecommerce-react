@@ -62,12 +62,22 @@ class ProductProvider extends Component {
             this.state.offset,
             this.state.offset + this.state.perPage
           );
-          this.setState({
-            products,
-            loading: false,
-            slice,
-            pageCount: Math.ceil(products.length / this.state.perPage)
-          });
+          this.setState(
+            () => {
+              return {
+                products,
+                loading: false,
+                slice,
+                pageCount: Math.ceil(products.length / this.state.perPage)
+              };
+            }
+            //   {
+            //   products,
+            //   loading: false,
+            //   slice,
+            //   pageCount: Math.ceil(products.length / this.state.perPage)
+            // }
+          );
         })
 
         .catch(error => console.log(error))
@@ -87,10 +97,13 @@ class ProductProvider extends Component {
     return tempItems;
   };
   setProduct = () => {
-    let products = this.getData();
+    let products = this.state.products;
+    console.log(products);
+
     let tempProducts = [];
+    console.log(tempProducts);
     products.forEach(item => {
-      console.log(item);
+      // console.log(item);
       const singleItem = { ...item };
       tempProducts = [...tempProducts, singleItem];
       console.log(tempProducts, singleItem);

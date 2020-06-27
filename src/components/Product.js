@@ -17,7 +17,7 @@ function Product(props) {
               className="img-container"
               onClick={() => value.detailHandler(slug)}
             >
-              <Link>
+              <Link to={`/details/${slug}`}>
                 <img src={image} alt="product" />
               </Link>
               <Link to={`/details/${slug}`} className="cart-btn-details">

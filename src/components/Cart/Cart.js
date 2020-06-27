@@ -6,13 +6,17 @@ import CartTotals from "../Cart/CartTotals";
 import ClearCartBtn from "../Cart/ClearCartBtn";
 import { ProductConsumer } from "../../context";
 
-const Cart = () => {
+const Cart = props => {
+  console.log(props);
+  const { history } = props;
+  console.log(history);
   return (
     <section className="cart">
       <div className="cart-center">
         <ProductConsumer>
           {value => {
             console.log(value.cart, value);
+            console.log(props.history);
             const { cart } = value;
             console.log(cart);
             // if (cart.length > 0) {
@@ -36,7 +40,7 @@ const Cart = () => {
                 <CartColumns />
                 <CartList valueProp={value} />
                 <ClearCartBtn />
-                <CartTotals />
+                <CartTotals historyProp={history} />
               </>
             ) : (
               <EmptyCart />
