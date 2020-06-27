@@ -57,27 +57,25 @@ class ProductProvider extends Component {
       })
         .then(response => response.items)
         .then(products => this.formatData(products))
+        // .then(products => {
+        //   this.setState(() => {
+        //     return { products, loading: false };
+        //   });
+        // })
+
         .then(products => {
           const slice = products.slice(
             this.state.offset,
             this.state.offset + this.state.perPage
           );
-          this.setState(
-            () => {
-              return {
-                products,
-                loading: false,
-                slice,
-                pageCount: Math.ceil(products.length / this.state.perPage)
-              };
-            }
-            //   {
-            //   products,
-            //   loading: false,
-            //   slice,
-            //   pageCount: Math.ceil(products.length / this.state.perPage)
-            // }
-          );
+          this.setState(() => {
+            return {
+              products,
+              loading: false,
+              slice,
+              pageCount: Math.ceil(products.length / this.state.perPage)
+            };
+          });
         })
 
         .catch(error => console.log(error))
@@ -85,6 +83,7 @@ class ProductProvider extends Component {
 
   componentDidMount() {
     this.getData();
+    this.setProduct();
   }
   formatData = items => {
     let tempItems = items.map(item => {
@@ -97,9 +96,9 @@ class ProductProvider extends Component {
     return tempItems;
   };
   setProduct = () => {
-    let products = this.state.products;
+    let products = [...this.state.products];
+    // let products = this.getData();
     console.log(products);
-
     let tempProducts = [];
     console.log(tempProducts);
     products.forEach(item => {
