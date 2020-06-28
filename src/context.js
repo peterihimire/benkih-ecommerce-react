@@ -57,6 +57,7 @@ class ProductProvider extends Component {
       })
         .then(response => response.items)
         .then(products => this.formatData(products))
+
         // .then(products => {
         //   this.setState(() => {
         //     return { products, loading: false };
@@ -96,25 +97,27 @@ class ProductProvider extends Component {
     return tempItems;
   };
   setProduct = () => {
-    let products = [...this.state.products];
-    // let products = this.getData();
-    console.log(products);
+    let goods = this.state.products;
+    console.log(goods);
     let tempProducts = [];
     console.log(tempProducts);
-    products.forEach(item => {
+    goods.forEach(item => {
       // console.log(item);
       const singleItem = { ...item };
       tempProducts = [...tempProducts, singleItem];
       console.log(tempProducts, singleItem);
     });
-    this.setState(() => {
-      return {
-        products: tempProducts
-      };
+    // this.setState(() => {
+    //   return {
+    //     products: tempProducts
+    //   };
+    // });
+    this.setState({
+      products: tempProducts
     });
   };
   getProduct = slug => {
-    // let tempProducts = [this.state.products];
+    // let tempProducts = [...this.state.products];
     const product = this.state.products.find(item => item.slug === slug);
     console.log(product);
     return product;
