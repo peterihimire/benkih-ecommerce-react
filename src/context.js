@@ -84,7 +84,7 @@ class ProductProvider extends Component {
 
   componentDidMount() {
     this.getData();
-    this.setProduct();
+    // this.setProduct();
   }
   formatData = items => {
     let tempItems = items.map(item => {
@@ -96,26 +96,26 @@ class ProductProvider extends Component {
     });
     return tempItems;
   };
-  setProduct = () => {
-    let goods = this.state.products;
-    console.log(goods);
-    let tempProducts = [];
-    console.log(tempProducts);
-    goods.forEach(item => {
-      // console.log(item);
-      const singleItem = { ...item };
-      tempProducts = [...tempProducts, singleItem];
-      console.log(tempProducts, singleItem);
-    });
-    // this.setState(() => {
-    //   return {
-    //     products: tempProducts
-    //   };
-    // });
-    this.setState({
-      products: tempProducts
-    });
-  };
+  // setProduct = () => {
+  //   let goods = this.state.products;
+  //   console.log(goods);
+  //   let tempProducts = [];
+  //   console.log(tempProducts);
+  //   goods.forEach(item => {
+  //     // console.log(item);
+  //     const singleItem = { ...item };
+  //     tempProducts = [...tempProducts, singleItem];
+  //     console.log(tempProducts, singleItem);
+  //   });
+  //   // this.setState(() => {
+  //   //   return {
+  //   //     products: tempProducts
+  //   //   };
+  //   // });
+  //   this.setState({
+  //     products: tempProducts
+  //   })
+  // };
   getProduct = slug => {
     // let tempProducts = [...this.state.products];
     const product = this.state.products.find(item => item.slug === slug);
@@ -234,7 +234,7 @@ class ProductProvider extends Component {
         return { cart: [] };
       },
       () => {
-        this.setProduct();
+        this.getData();
         this.addTotals();
       }
     );

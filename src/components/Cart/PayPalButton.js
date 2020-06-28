@@ -13,7 +13,7 @@ export class PayPalButton extends Component {
           const onSuccess = payment => {
             console.log("The payment was succeeded!", payment);
             this.props.emptyCart();
-            this.props.history.push("/products");
+            this.props.history.historyProp.push("/products");
           };
           const onCancel = data => {
             console.log("The payment was cancelled!", data);
