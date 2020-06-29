@@ -1259,13 +1259,15 @@ body {
 .contact-div > div {
   font-size: 2rem;
   border: 0.3rem solid var(--mainBlack);
+  border-radius: 0.5rem;
   padding: 2rem 3rem;
   margin: 0 0 3rem 0;
   transition: all 0.3s linear;
 }
 
 .contact-div > div:hover {
-  padding: 1rem 2rem;
+  /* padding: 1rem 2rem; */
+  transform: scale(0.9);
   background: var(--primaryColor);
   color: var(--mainWhite);
 }
@@ -1297,7 +1299,8 @@ body {
   }
 
   .contact-div > div:hover {
-    padding: 2rem 3rem;
+    /* padding: 2rem 3rem; */
+    transform: scale(0.95);
     background: var(--primaryColor);
     color: var(--mainWhite);
   }
