@@ -68,7 +68,7 @@ class SimpleSlider extends React.Component {
         <div className="box">
           <div className="box-center">
             <p>
-              <span>$ 110.99</span>{" "}
+              <span>$ 799.99</span>{" "}
             </p>
           </div>
           <div className="slider-img">
@@ -78,7 +78,7 @@ class SimpleSlider extends React.Component {
         <div className="box">
           <div className="box-center">
             <p>
-              <span>$ 110.99</span>{" "}
+              <span>$ 299.99</span>{" "}
             </p>
           </div>
           <div className="slider-img">
@@ -88,7 +88,7 @@ class SimpleSlider extends React.Component {
         <div className="box">
           <div className="box-center">
             <p>
-              <span>$ 110.99</span>{" "}
+              <span>$ 999.99</span>{" "}
             </p>
           </div>
           <div className="slider-img">
@@ -98,7 +98,7 @@ class SimpleSlider extends React.Component {
         <div className="box">
           <div className="box-center">
             <p>
-              <span>$ 110.99</span>{" "}
+              <span>$ 199.99</span>{" "}
             </p>
           </div>
           <div className="slider-img">

@@ -1,11 +1,12 @@
 import React from "react";
 
-const Title = () => {
+function Title(props) {
   return (
-    <div>
-      <h1>This is the Tile component</h1>
+    <div className="section-title">
+      <h1 className="color-title">{props.title}</h1>
+      <div className="title-div" />
     </div>
   );
-};
+}
 
 export default Title;

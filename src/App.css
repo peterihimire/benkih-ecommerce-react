@@ -793,8 +793,7 @@ body {
   margin: 0 0 0.5rem 0;
   text-transform: capitalize;
 }
-.details-info p {
-}
+
 .error {
   padding: 5rem 2rem;
 }
@@ -966,6 +965,7 @@ body {
 .cart-totals {
   display: flex;
   justify-content: flex-end;
+  margin: 5rem 0 0 0;
 }
 .cart-totals-container {
   background: var(--mainGrey);
@@ -1143,8 +1143,6 @@ body {
 .pagination > li:last-child > a,
 .pagination > li:last-child > span {
   color: var(--mainBlack);
-  /* text-transform: uppercase; */
-  /* border-radius: unset; */
 }
 /* end of pagination */
 /* loading */
@@ -1159,3 +1157,194 @@ body {
   color: var(--primaryColor);
 }
 /* end of loading */
+/* paypal */
+.paypal-btn-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem 1rem 1rem;
+  z-index: 0;
+  background: rgb(209, 89, 89);
+}
+/* end of paypal */
+
+/* not found */
+.not-found {
+  padding: 6rem 2rem;
+}
+.not-found-center {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: var(--mainOrange); */
+}
+.not-found-container h1 {
+  font-size: var(--mediumFont);
+}
+.not-found-url {
+  padding: 0 1rem;
+  color: var(--mainRed);
+  font-style: italic;
+}
+/* end of not found */
+
+/* about me */
+.about {
+  padding: 6rem 2rem;
+}
+.about-pix {
+  width: 270px;
+}
+.about-me {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 40px;
+  padding: 0 0 6rem 0;
+}
+.about-img-div {
+  display: flex;
+  justify-content: center;
+}
+.about-img-container {
+  border: solid 0.2rem var(--primaryColor);
+  border-radius: 0.5rem;
+  position: relative;
+  width: 270px;
+  height: 362px;
+  top: 20px;
+  margin: 0 0 2rem 0;
+}
+.about-img-container img {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  border-radius: 0.5rem;
+}
+.about-text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-text-div p {
+  margin: 0 0 2rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .about-center {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}
+/* end of about me */
+
+/* contact section */
+.contact {
+  padding: 6rem 2rem;
+  align-content: center;
+  align-items: center;
+}
+.contact-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 9rem 0;
+}
+.contact-div > div {
+  font-size: 2rem;
+  border: 0.3rem solid var(--mainBlack);
+  padding: 2rem 3rem;
+  margin: 0 0 3rem 0;
+  transition: all 0.3s linear;
+}
+
+.contact-div > div:hover {
+  padding: 1rem 2rem;
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+}
+.contact-div > div:hover span {
+  color: var(--mainWhite);
+}
+.contact-span {
+  color: var(--primaryColor);
+  text-transform: capitalize;
+  padding: 0 1rem 0 0;
+  font-weight: bold;
+}
+.contact-span:hover {
+  color: var(--mainWhite);
+}
+@media screen and (min-width: 768px) {
+  .contact-center {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  .contact-div > div {
+    font-size: 2rem;
+    border: 0.3rem solid var(--mainBlack);
+    border-radius: 0.5rem;
+    padding: 3rem 4rem;
+    margin: 0 0 4rem 0;
+    transition: all 0.3s linear;
+  }
+
+  .contact-div > div:hover {
+    padding: 2rem 3rem;
+    background: var(--primaryColor);
+    color: var(--mainWhite);
+  }
+  .contact-div > div:hover span {
+    color: var(--mainWhite);
+  }
+  .contact-span {
+    color: var(--primaryColor);
+    text-transform: capitalize;
+    padding: 0 1rem 0 0;
+    font-weight: bold;
+  }
+}
+/* end of contact section */
+/* title */
+.section-title {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.section-title h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 4rem 0 0 0;
+}
+
+.title-div {
+  width: 4rem;
+  height: 0.3rem;
+  margin: 0 auto;
+  background: var(--primaryColor);
+  /* display: none; */
+}
+
+@media screen and (min-width: 768px) {
+  .section-title h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    padding: 0;
+  }
+  .title-div {
+    width: 7rem;
+    height: 0.5rem;
+    margin: 0 auto;
+    background: var(--primaryColor);
+    /* display: none; */
+  }
+}
+/* end of title */
