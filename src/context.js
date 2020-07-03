@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import items from "./data";
 import Client from "./Contentful";
+import { FaPlane, FaMoneyBillWaveAlt, FaUsers } from "react-icons/fa";
 
 // Client.getEntries({
 //   content_type: "benkihStore"
@@ -12,6 +13,26 @@ const ProductContext = React.createContext();
 //Provider
 class ProductProvider extends Component {
   state = {
+    categories: [
+      {
+        title: "fast delivery",
+        icon: <FaPlane />,
+        detail:
+          "Our delivery process can take place from minutes to few hours depending on your location."
+      },
+      {
+        title: "affordable price",
+        icon: <FaMoneyBillWaveAlt />,
+        detail:
+          "Our delivery process can take place from minutes to few hours depending on your location."
+      },
+      {
+        title: "customer first",
+        icon: <FaUsers />,
+        detail:
+          "Our delivery process can take place from minutes to few hours depending on your location."
+      }
+    ],
     offset: 0,
     products: [],
     perPage: 5,
@@ -49,6 +70,7 @@ class ProductProvider extends Component {
   //     console.log(error);
   //   }
   // };
+
   getData = () =>
     fetch(
       Client.getEntries({
@@ -96,6 +118,7 @@ class ProductProvider extends Component {
     });
     return tempItems;
   };
+
   // setProduct = () => {
   //   let goods = this.state.products;
   //   console.log(goods);
@@ -116,6 +139,7 @@ class ProductProvider extends Component {
   //     products: tempProducts
   //   })
   // };
+
   getProduct = slug => {
     // let tempProducts = [...this.state.products];
     const product = this.state.products.find(item => item.slug === slug);
