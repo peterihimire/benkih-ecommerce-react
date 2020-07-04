@@ -2,12 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img1 from "../images/product1.png";
-import img2 from "../images/product8.png";
-import img5 from "../images/product9.png";
-import img6 from "../images/product6.png";
-import img7 from "../images/product7.png";
-
+import { ProductConsumer } from "../context";
 // // Custom arrow next and prev buttons
 // const NextArrow = props => {
 //   const { className, style, onClick } = props;
@@ -54,58 +49,31 @@ class SimpleSlider extends React.Component {
       // prevArrow: <PrevArrow />
     };
     return (
-      <Slider {...settings} className="slider-box">
-        <div className="box">
-          <div className="box-center">
-            <p>
-              <span>$ 499.99</span>{" "}
-            </p>
-          </div>
-          <div className="slider-img">
-            <img src={img7} alt="product" />
-          </div>
-        </div>
-        <div className="box">
-          <div className="box-center">
-            <p>
-              <span>$ 799.99</span>{" "}
-            </p>
-          </div>
-          <div className="slider-img">
-            <img src={img1} alt="product" />
-          </div>
-        </div>
-        <div className="box">
-          <div className="box-center">
-            <p>
-              <span>$ 299.99</span>{" "}
-            </p>
-          </div>
-          <div className="slider-img">
-            <img src={img2} alt="product" />
-          </div>
-        </div>
-        <div className="box">
-          <div className="box-center">
-            <p>
-              <span>$ 999.99</span>{" "}
-            </p>
-          </div>
-          <div className="slider-img">
-            <img src={img6} alt="product" />
-          </div>
-        </div>
-        <div className="box">
-          <div className="box-center">
-            <p>
-              <span>$ 199.99</span>{" "}
-            </p>
-          </div>
-          <div className="slider-img">
-            <img src={img5} alt="product" />
-          </div>
-        </div>
-      </Slider>
+      <ProductConsumer>
+        {value => {
+          console.log(value);
+          const { dealOfDay } = value;
+          console.log(dealOfDay);
+          return (
+            <Slider {...settings} className="slider-box">
+              {dealOfDay.map(dealDay => {
+                return (
+                  <div className="box">
+                    <div className="box-center">
+                      <p>
+                        <span>$ {dealDay.price}</span>{" "}
+                      </p>
+                    </div>
+                    <div className="slider-img">
+                      <img src={dealDay.image} alt="product" />
+                    </div>
+                  </div>
+                );
+              })}
+            </Slider>
+          );
+        }}
+      </ProductConsumer>
     );
   }
 }

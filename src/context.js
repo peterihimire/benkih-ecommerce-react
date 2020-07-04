@@ -45,7 +45,10 @@ class ProductProvider extends Component {
     cartSubTotal: 0,
     cartTax: 0,
     cartTotal: 0,
-    loading: true
+    loading: true,
+    featured: [],
+    dealOfDay: [],
+    newArrival: []
   };
   // getData = async () => {
   //   try {
@@ -104,6 +107,9 @@ class ProductProvider extends Component {
               products,
               loading: false,
               slice,
+              featured,
+              dealOfDay,
+              newArrival,
               pageCount: Math.ceil(products.length / this.state.perPage)
             };
           });
