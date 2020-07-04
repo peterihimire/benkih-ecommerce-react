@@ -13,7 +13,7 @@ const ProductContext = React.createContext();
 //Provider
 class ProductProvider extends Component {
   state = {
-    categories: [
+    features: [
       {
         title: "fast delivery",
         icon: <FaPlane />,
@@ -91,6 +91,14 @@ class ProductProvider extends Component {
             this.state.offset,
             this.state.offset + this.state.perPage
           );
+          let newArrival = products.filter(
+            product => product.newArrival === true
+          );
+          let featured = products.filter(product => product.featured === true);
+          let dealOfDay = products.filter(
+            product => product.dealOfDay === true
+          );
+          console.log(newArrival, featured, dealOfDay);
           this.setState(() => {
             return {
               products,

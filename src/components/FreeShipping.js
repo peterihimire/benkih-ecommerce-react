@@ -5,8 +5,12 @@ const FreeShipping = () => {
     <section className="free-shipping">
       <div className="free-shipping-center">
         <div className="free-shipping-container">
-          <p>free shipping for orders over $800 </p>
-          <p>click register to get started</p>
+          <p className="free-shipping-title">
+            <strong>free shipping</strong> for orders over $499{" "}
+          </p>
+          <p className="free-shipping-subtitle">
+            we value our esteemed customers
+          </p>
         </div>
       </div>
     </section>

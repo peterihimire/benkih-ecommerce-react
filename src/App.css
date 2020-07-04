@@ -2,6 +2,7 @@
   font-size: 62.5%;
   --primaryColor: #38304d;
   --secondaryColor: #eeeded;
+  --darkGrey: #808080;
   --mainGrey: #fafafa;
   --mainWhite: #ffffff;
   --mainBlack: #444444;
@@ -1351,3 +1352,41 @@ body {
   }
 }
 /* end of title */
+
+/* free shipping */
+.free-shipping {
+  padding: 4rem;
+  background: var(--primaryColor);
+  color: var(--darkGrey);
+}
+.free-shipping-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.free-shipping-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.free-shipping-title strong {
+  color: var(--mainWhite);
+}
+.free-shipping-subtitle {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .free-shipping-title {
+    font-size: 4rem;
+    text-transform: uppercase;
+  }
+  .free-shipping-subtitle {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding-top: 1rem;
+  }
+}
+/* end of free shipping */
