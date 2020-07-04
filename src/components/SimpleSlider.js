@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ProductConsumer } from "../context";
+import Loading from "../components/Loading";
 // // Custom arrow next and prev buttons
 // const NextArrow = props => {
 //   const { className, style, onClick } = props;
@@ -52,24 +53,28 @@ class SimpleSlider extends React.Component {
       <ProductConsumer>
         {value => {
           console.log(value);
-          const { dealOfDay } = value;
+          const { dealOfDay, loading } = value;
           console.log(dealOfDay);
           return (
             <Slider {...settings} className="slider-box">
-              {dealOfDay.map(dealDay => {
-                return (
-                  <div className="box">
-                    <div className="box-center">
-                      <p>
-                        <span>$ {dealDay.price}</span>{" "}
-                      </p>
+              {loading ? (
+                <Loading />
+              ) : (
+                dealOfDay.map(dealDay => {
+                  return (
+                    <div className="box">
+                      <div className="box-center">
+                        <p>
+                          <span>$ {dealDay.price}</span>{" "}
+                        </p>
+                      </div>
+                      <div className="slider-img">
+                        <img src={dealDay.image} alt="product" />
+                      </div>
                     </div>
-                    <div className="slider-img">
-                      <img src={dealDay.image} alt="product" />
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })
+              )}
             </Slider>
           );
         }}
