@@ -1,6 +1,5 @@
 import React from "react";
 import { ProductConsumer } from "../context";
-import Product from "../components/Product";
 import { Link } from "react-router-dom";
 import { FaCartPlus, FaInfo } from "react-icons/fa";
 import Title from "../components/Title";
