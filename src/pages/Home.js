@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import FreeShipping from "../components/FreeShipping";
 import FeaturedProducts from "../components/FeaturedProducts";
+import NewArrival from "../components/NewArrival";
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       </Hero>
       <FreeShipping />
       <FeaturedProducts />
+      <NewArrival />
     </>
   );
 }
