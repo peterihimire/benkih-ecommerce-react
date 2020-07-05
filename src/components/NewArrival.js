@@ -18,7 +18,7 @@ const NewArrival = () => {
               <div className="featured-container">
                 {newArrival.map(newArr => {
                   return (
-                    <article className="product">
+                    <article className="product new-arr-product">
                       <div
                         className="img-container img-container-newarr"
                         onClick={() => value.detailHandler(newArr.slug)}
@@ -47,11 +47,10 @@ const NewArrival = () => {
                         </button>
                       </div>
 
-                      <div className="product-footer">
-                        <p>{newArr.name}</p>
+                      <div className="new-arr-footer">
+                        {/* <p>{newArr.name}</p> */}
                         <h3>
-                          <span>$ </span>
-                          {newArr.price}
+                          <span>$ {newArr.price}</span>
                         </h3>
                       </div>
                     </article>

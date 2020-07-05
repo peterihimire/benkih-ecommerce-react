@@ -18,7 +18,7 @@ const FeaturedProducts = () => {
               <div className="featured-container">
                 {featured.map(featured => {
                   return (
-                    <article className="product">
+                    <article className="product new-arr-product">
                       <div
                         className="img-container img-container-featured"
                         onClick={() => value.detailHandler(featured.slug)}
@@ -48,11 +48,10 @@ const FeaturedProducts = () => {
                         </button>
                       </div>
 
-                      <div className="product-footer">
-                        <p>{featured.name}</p>
+                      <div className="new-arr-footer">
+                        {/* <p>{featured.name}</p> */}
                         <h3>
-                          <span>$ </span>
-                          {featured.price}
+                          <span>$ {featured.price}</span>
                         </h3>
                       </div>
                     </article>
