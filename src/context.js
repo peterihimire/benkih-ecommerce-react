@@ -48,7 +48,9 @@ class ProductProvider extends Component {
     loading: true,
     featured: [],
     dealOfDay: [],
-    newArrival: []
+    newArrival: [],
+    category: "men",
+    sortedProducts: []
   };
   // getData = async () => {
   //   try {
@@ -101,6 +103,10 @@ class ProductProvider extends Component {
           let dealOfDay = products.filter(
             product => product.dealOfDay === true
           );
+          // let category = products.filter(product =>
+          //   console.log(product.category)
+          // );
+
           console.log(newArrival, featured, dealOfDay);
           this.setState(() => {
             return {
@@ -305,6 +311,17 @@ class ProductProvider extends Component {
       }
     );
   };
+  filterProductsHandler = () => {
+    let { products, category } = this.state;
+    let tempProducts = [...products];
+    if (category !== "men") {
+      tempProducts = tempProducts.filter(
+        product => product.category === category
+      );
+    }
+    this.setState({ sortedProducts: tempProducts });
+    console.log(products, category);
+  };
   render() {
     return (
       <ProductContext.Provider
@@ -319,7 +336,8 @@ class ProductProvider extends Component {
           decrementHandler: this.decrementHandler,
           removeProductHandler: this.removeProductHandler,
           clearCartHandler: this.clearCartHandler,
-          handlePageClick: this.handlePageClick
+          handlePageClick: this.handlePageClick,
+          filterProductsHandler: this.filterProductsHandler
         }}
       >
         {this.props.children}

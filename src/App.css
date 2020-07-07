@@ -269,7 +269,7 @@ body {
   position: fixed;
   top: 52.5px;
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
   background: var(--primaryColor);
   color: var(--mainWhite);
   z-index: 2;
@@ -286,15 +286,48 @@ body {
   width: 12rem;
   text-transform: uppercase;
   font-size: 1.2rem;
+  background: none;
+  color: var(--mainWhite);
+  border: none;
+  padding: 1rem 0rem;
+  outline: none;
 }
-
+.category-dropdown {
+  position: relative;
+}
+.category-dropdown-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: var(--mainWhite);
+  border-radius: 0.15rem;
+  width: 100%;
+  top: 102%;
+  box-shadow: 0rem 0.8rem 1.6rem 0rem rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 3;
+}
+.category-dropdown-content a {
+  padding: 0.7rem 0.2rem;
+  text-decoration: none;
+  color: var(--primaryColor);
+  text-transform: capitalize;
+  font-size: 1.4rem;
+}
+.category-dropdown-content a:hover {
+  background: var(--secondaryColor);
+}
+.category-dropdown:hover .category-dropdown-content {
+  display: flex;
+}
 @media screen and (min-width: 768px) {
   .category {
     background: var(--primaryColor);
     color: var(--mainWhite);
-    padding: 1.2rem 2rem;
     top: 123.75px;
     z-index: 2;
+    padding: 0 2rem;
   }
   .category-center {
     max-width: 117rem;
@@ -302,11 +335,39 @@ body {
     display: flex;
     justify-content: space-between;
   }
+  .category-dropdown {
+    position: relative;
+  }
   .category-div {
     display: flex;
     justify-content: space-between;
     width: 30rem;
     text-transform: uppercase;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    color: var(--mainWhite);
+    outline: none;
+    padding: 1.2rem 0rem;
+  }
+  .category-dropdown-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: var(--mainWhite);
+    border-radius: 0.15rem;
+    width: 100%;
+    top: 102%;
+    box-shadow: 0rem 0.8rem 1.6rem 0rem rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 3;
+  }
+  .category-dropdown-content a {
+    padding: 1rem 0.8rem;
+    text-decoration: none;
+    color: var(--primaryColor);
+    text-transform: capitalize;
     font-size: 1.6rem;
   }
 }
@@ -1172,7 +1233,6 @@ body {
   align-items: center;
   padding: 1rem 1rem 1rem 1rem;
   z-index: 0;
-  background: rgb(209, 89, 89);
 }
 /* end of paypal */
 
