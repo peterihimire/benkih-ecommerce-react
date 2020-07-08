@@ -15,7 +15,7 @@ const Contact = () => {
           </div>
           <div>
             <span className="contact-span">address:</span>6 Oyediran street,
-            Ikeja, Lagos State.
+            Oke-Ira, Ikeja, Lagos State.
           </div>
         </div>
       </div>

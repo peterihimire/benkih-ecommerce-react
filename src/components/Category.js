@@ -21,12 +21,12 @@ const Category = () => {
         </div>
 
         <div className="category-div">
-          {" "}
-          <p>search...</p>
-          <span>
-            {" "}
-            <FaSearch />
-          </span>
+          <div className="search-form">
+            <input placeholder="search..." id="search" name="search" />
+            <button className="search-form-btn">
+              <FaSearch className="search-icon" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
