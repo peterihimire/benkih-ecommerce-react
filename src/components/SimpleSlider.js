@@ -62,7 +62,7 @@ class SimpleSlider extends React.Component {
               ) : (
                 dealOfDay.map(dealDay => {
                   return (
-                    <div className="box">
+                    <div className="box" key={dealDay.id}>
                       <div className="box-center">
                         <p>
                           <span>$ {dealDay.price}</span>{" "}

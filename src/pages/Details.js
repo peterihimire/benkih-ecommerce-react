@@ -59,10 +59,10 @@ class Details extends React.Component {
                   </div>
                   <div className="details-info">
                     <h3 className="details-model">
-                      model : <span>{product.name}</span>
+                      name : <span>{product.name}</span>
                     </h3>
                     <h5 className="details-made">
-                      made by : <span>{product.company}</span>
+                      designer : <span>{product.company}</span>
                     </h5>
                     <h5 className="details-price">
                       <strong>

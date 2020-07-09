@@ -49,7 +49,7 @@ class ProductProvider extends Component {
     featured: [],
     dealOfDay: [],
     newArrival: [],
-    category: "men",
+    category: "all",
     sortedProducts: []
   };
   // getData = async () => {
@@ -311,16 +311,31 @@ class ProductProvider extends Component {
       }
     );
   };
+
+  changeHandler = e => {
+    const target = e.target;
+    console.log(target);
+
+    const value = target.value;
+    const type = e.target.name;
+
+    console.log(type, value);
+
+    this.setState({ [type]: value }, this.filterProductsHandler);
+  };
+
   filterProductsHandler = () => {
-    let { products, category } = this.state;
+    let { products, category, slice } = this.state;
     let tempProducts = [...products];
-    if (category !== "men") {
+    if (category !== "all") {
       tempProducts = tempProducts.filter(
         product => product.category === category
       );
     }
-    this.setState({ sortedProducts: tempProducts });
-    console.log(products, category);
+    this.setState(() => {
+      return { sortedProducts: tempProducts };
+    });
+    console.log(category, tempProducts);
   };
   render() {
     return (
@@ -337,7 +352,8 @@ class ProductProvider extends Component {
           removeProductHandler: this.removeProductHandler,
           clearCartHandler: this.clearCartHandler,
           handlePageClick: this.handlePageClick,
-          filterProductsHandler: this.filterProductsHandler
+          filterProductsHandler: this.filterProductsHandler,
+          changeHandler: this.changeHandler
         }}
       >
         {this.props.children}

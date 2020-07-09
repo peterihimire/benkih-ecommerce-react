@@ -22,7 +22,10 @@ const NewArrival = () => {
                 ) : (
                   newArrival.map(newArr => {
                     return (
-                      <article className="product new-arr-product">
+                      <article
+                        className="product new-arr-product"
+                        key={newArr.id}
+                      >
                         <div
                           className="img-container img-container-newarr"
                           onClick={() => value.detailHandler(newArr.slug)}

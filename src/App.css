@@ -1526,10 +1526,6 @@ body {
   font-size: 1.2rem;
 }
 
-/* .search-icon {
-  right: 0;
-  top: 3px;
-} */
 @media screen and (min-width: 768px) {
   .search-form-btn {
     background: var(--mainGrey);

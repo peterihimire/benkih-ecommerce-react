@@ -21,7 +21,10 @@ const FeaturedProducts = () => {
                 ) : (
                   featured.map(featured => {
                     return (
-                      <article className="product new-arr-product">
+                      <article
+                        className="product new-arr-product"
+                        key={featured.id}
+                      >
                         <div
                           className="img-container img-container-featured"
                           onClick={() => value.detailHandler(featured.slug)}
