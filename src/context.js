@@ -327,7 +327,7 @@ class ProductProvider extends Component {
   };
 
   filterProductsHandler = () => {
-    let { products, category, slice } = this.state;
+    let { products, category } = this.state;
     let tempProducts = [...products];
     if (category !== "all") {
       tempProducts = tempProducts.filter(

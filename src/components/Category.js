@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBars, FaSearch } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { ProductConsumer } from "../context";
 
@@ -8,7 +8,7 @@ const Category = () => {
     <ProductConsumer>
       {value => {
         console.log(value);
-        const { changeHandler, category, products, slice } = value;
+        const { changeHandler, category, products } = value;
         console.log(changeHandler, category);
 
         const getUnique = (items, val) => {
