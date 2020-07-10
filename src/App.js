@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Details from "./pages/Details";
 import NotFound from "./pages/NotFound";
+import CategoryPage from "./pages/CategoryPage";
 import { Route, Switch } from "react-router-dom";
 import RenderTop from "./components/RenderTop";
 
@@ -45,6 +46,7 @@ class App extends Component {
           <Route path="/contact" component={Contact} />
           <Route path="/details/:slug" component={Details} />
           <Route path="/cart" component={Cart} />
+          <Route path="/category" component={CategoryPage} />
           <Route component={NotFound} />
         </Switch>
         <Footer />

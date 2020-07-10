@@ -317,7 +317,9 @@ class ProductProvider extends Component {
     console.log(target);
 
     const value = target.value;
+    console.log(value);
     const type = e.target.name;
+    console.log(type);
 
     console.log(type, value);
 
@@ -365,4 +367,4 @@ class ProductProvider extends Component {
 //Consumer
 const ProductConsumer = ProductContext.Consumer;
 
-export { ProductProvider, ProductConsumer };
+export { ProductProvider, ProductConsumer, ProductContext };

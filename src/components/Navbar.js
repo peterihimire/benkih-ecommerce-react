@@ -36,6 +36,15 @@ const Navbar = props => {
                   products
                 </NavLink>
               </li>
+              {/* <li className="navbar-item">
+                <NavLink
+                  activeClassName="active"
+                  className="navbar-single-link"
+                  to="/category"
+                >
+                  category
+                </NavLink>
+              </li> */}
               <li className="navbar-item">
                 <NavLink
                   activeClassName="active"
