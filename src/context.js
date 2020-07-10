@@ -49,7 +49,7 @@ class ProductProvider extends Component {
     featured: [],
     dealOfDay: [],
     newArrival: [],
-    category: "all",
+    category: "categories",
     sortedProducts: []
   };
   // getData = async () => {

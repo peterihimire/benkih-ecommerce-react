@@ -20,7 +20,7 @@ const Category = () => {
         console.log(products[categories]);
         console.log(category);
 
-        categories = ["all", ...categories];
+        categories = ["categories", ...categories];
 
         return (
           <div className="category">
