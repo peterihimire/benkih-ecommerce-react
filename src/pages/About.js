@@ -1,7 +1,7 @@
 import React from "react";
 import Title from "../components/Title";
 import petersPix from "../images/peter-nh.jpg";
-
+import CountUpDiv from "../components/CountUpDiv";
 const About = () => {
   return (
     <section className="about">
@@ -9,7 +9,7 @@ const About = () => {
         <Title title="about" />
         <div className="about-me">
           <div className="about-img-div">
-            <div className="about-img-container">
+            {/* <div className="about-img-container">
               <img
                 src={petersPix}
                 // width="300px"
@@ -51,7 +51,8 @@ const About = () => {
                 resume
               </a>{" "}
               , for more information.
-            </p>
+            </p> */}
+            <CountUpDiv />
           </div>
         </div>
       </div>

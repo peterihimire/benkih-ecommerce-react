@@ -1276,8 +1276,8 @@ body {
   padding: 0 0 6rem 0;
 }
 .about-img-div {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 }
 .about-img-container {
   border: solid 0.2rem var(--primaryColor);
@@ -1635,3 +1635,32 @@ body {
   grid-column-gap: 40px;
 }
 /* end category page */
+/* count-up */
+.count-up {
+  padding: 6rem 2rem;
+}
+.category-page-center {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.count-up-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 10rem;
+  border-radius: 0.3rem;
+}
+.count-up-car div {
+  display: flex;
+}
+.count-up-car p {
+  font-size: 5rem;
+}
+.count-up-container {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-row-gap: 4rem;
+  grid-column-gap: 4rem;
+}
+
+/* end of count-up */
