@@ -1,6 +1,5 @@
 import React from "react";
 import Title from "../components/Title";
-import petersPix from "../images/peter-nh.jpg";
 import CountUpDiv from "../components/CountUpDiv";
 const About = () => {
   return (
