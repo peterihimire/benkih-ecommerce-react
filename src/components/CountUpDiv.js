@@ -7,12 +7,11 @@ const CountUpDiv = () => {
       <div className="count-up">
         <div className="count-up-center">
           <div className="count-up-container">
-            {/* <div className="count-up-card"> */}
-            <CountUp start={0} end={10000} duration={11} delay={0}>
+            <CountUp start={0} end={9762} duration={12} delay={0}>
               {({ countUpRef }) => {
                 return (
                   <div className="count-up-card">
-                    <div>
+                    <div className="count-up-fig">
                       <p ref={countUpRef} />
                       <p>+</p>
                     </div>
@@ -23,11 +22,11 @@ const CountUpDiv = () => {
                 );
               }}
             </CountUp>
-            <CountUp start={0} end={1250} duration={10} delay={0}>
+            <CountUp start={0} end={1250} duration={8} delay={0}>
               {({ countUpRef }) => {
                 return (
                   <div className="count-up-card">
-                    <div>
+                    <div className="count-up-fig">
                       <p ref={countUpRef} />
                       <p>+</p>
                     </div>
@@ -38,11 +37,12 @@ const CountUpDiv = () => {
                 );
               }}
             </CountUp>
-            <CountUp start={0} end={600} duration={8} delay={0}>
+
+            <CountUp start={0} end={600} duration={5} delay={0}>
               {({ countUpRef }) => {
                 return (
                   <div className="count-up-card">
-                    <div>
+                    <div className="count-up-fig">
                       <p ref={countUpRef} />
                       <p>+</p>
                     </div>
@@ -53,7 +53,6 @@ const CountUpDiv = () => {
                 );
               }}
             </CountUp>
-            {/* </div> */}
           </div>
         </div>
       </div>
