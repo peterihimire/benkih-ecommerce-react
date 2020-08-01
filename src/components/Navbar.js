@@ -10,6 +10,13 @@ const Navbar = props => {
         <div className="navbar-center">
           <div className="first-nav">
             <div className="navbar-header">
+              <button
+                className="navbar-btn"
+                type="button"
+                onClick={props.clicked}
+              >
+                <FaBars className="navbar-btn-icon" />
+              </button>
               <Link to="/" className="logo">
                 <strong>
                   ben<span>kih</span>{" "}
@@ -66,7 +73,7 @@ const Navbar = props => {
             </ul>
 
             <ul className="navbar-icons">
-              <li className="navbar-items items-btn">
+              {/* <li className="navbar-items items-btn">
                 <button
                   className="navbar-btn"
                   type="button"
@@ -74,7 +81,7 @@ const Navbar = props => {
                 >
                   <FaBars className="navbar-btn-icon" />
                 </button>
-              </li>
+              </li> */}
               {/* <li className="navbar-items">
                 <Link to="">
                   <span>

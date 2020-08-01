@@ -1,13 +1,13 @@
 :root {
   font-size: 62.5%;
-  --primaryColor: #38304d;
+  --primaryColor: #3200b1;
   --secondaryColor: #eeeded;
   --darkGrey: #808080;
   --mainGrey: #fafafa;
   --mainWhite: #ffffff;
   --mainBlack: #444444;
   --mainRed: #fa0202;
-  --mainOrange: #f5a700;
+  --mainOrange: #e99f01;
   --mainTransition: all 0.5s linear;
   --largeFont: 8rem;
   --mediumFont: 6rem;
@@ -76,11 +76,13 @@ body {
   text-decoration: none;
   color: var(--primaryColor);
   letter-spacing: var(--mainSpacing);
+  padding: 0 0 0 1.5rem;
 }
 .navbar-btn {
   background: none;
-  border: solid 0.2rem var(--primaryColor);
-  border-radius: 0.4rem;
+  /* border: solid 0.2rem var(--primaryColor);
+  border-radius: 0.4rem; */
+  border: none;
   padding: 0.27rem 0.5rem 0rem 0.5rem;
   outline: none;
 }
@@ -260,6 +262,7 @@ body {
     text-decoration: none;
     color: var(--primaryColor);
     letter-spacing: var(--mainSpacing);
+    padding: 0 0 0 0rem;
   }
 }
 /* end of navbar */
