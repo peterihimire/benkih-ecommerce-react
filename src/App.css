@@ -78,6 +78,11 @@ body {
   letter-spacing: var(--mainSpacing);
   padding: 0 0 0 1.5rem;
 }
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .navbar-btn {
   background: none;
   /* border: solid 0.2rem var(--primaryColor);
