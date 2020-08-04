@@ -101,6 +101,7 @@ const Navbar = props => {
                   <span>
                     <FaCartPlus className="navbar-items-icon" />
                   </span>
+                  
                 </Link>
               </li>
             </ul>
