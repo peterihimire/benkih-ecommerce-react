@@ -9,14 +9,14 @@ class ProductList extends Component {
     return (
       <>
         <ProductConsumer>
-          {value => {
+          {(value) => {
             console.log(value);
             const {
               slice,
               products,
               pageCount,
               handlePageClick,
-              loading
+              loading,
             } = value;
             console.log(slice, products, pageCount, handlePageClick, loading);
             return (
@@ -26,7 +26,7 @@ class ProductList extends Component {
                 ) : (
                   <>
                     <div className="product-list-center">
-                      {slice.map(item => {
+                      {slice.map((item) => {
                         return <Product key={item.id} product={item} />;
                       })}
                     </div>

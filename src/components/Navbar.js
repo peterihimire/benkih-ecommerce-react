@@ -3,7 +3,7 @@ import Category from "../components/Category";
 import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaCartPlus, FaUser } from "react-icons/fa";
 
-const Navbar = props => {
+const Navbar = (props) => {
   return (
     <React.Fragment>
       <nav className="navbar">
@@ -101,7 +101,6 @@ const Navbar = props => {
                   <span>
                     <FaCartPlus className="navbar-items-icon" />
                   </span>
-                  
                 </Link>
               </li>
             </ul>

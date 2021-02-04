@@ -10,16 +10,16 @@ function Product(props) {
   return (
     <article className="product">
       <ProductConsumer>
-        {value => {
+        {(value) => {
           console.log(value);
           return (
             <div
               className="img-container"
               onClick={() => value.detailHandler(slug)}
             >
-              <Link to={`/details/${slug}`}>
+              <div>
                 <img src={image} alt="product" />
-              </Link>
+              </div>
               <Link to={`/details/${slug}`} className="cart-btn-details">
                 <FaInfo />
               </Link>
@@ -54,8 +54,8 @@ Product.propTypes = {
     id: PropTypes.string,
     images: PropTypes.array,
     name: PropTypes.string,
-    inCart: PropTypes.bool
-  }).isRequired
+    inCart: PropTypes.bool,
+  }).isRequired,
 };
 
 export default Product;

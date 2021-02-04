@@ -160,6 +160,7 @@ class ProductProvider extends Component {
   //   })
   // };
 
+
   getProduct = slug => {
     // let tempProducts = [...this.state.products];
     const product = this.state.products.find(item => item.slug === slug);
@@ -227,6 +228,7 @@ class ProductProvider extends Component {
       }
     );
   };
+  
   decrementHandler = slug => {
     let tempCart = [...this.state.cart];
     const selectedProduct = tempCart.find(item => item.slug === slug);

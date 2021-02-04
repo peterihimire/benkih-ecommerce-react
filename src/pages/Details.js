@@ -19,6 +19,7 @@ class Details extends React.Component {
           console.log(getProduct);
           const product = getProduct(this.state.slug);
           console.log(product);
+
           if (!product) {
             return (
               <div className="error">
@@ -34,6 +35,7 @@ class Details extends React.Component {
               </div>
             );
           }
+          
           // const {
           //   slug,
           //   name,
@@ -45,6 +47,7 @@ class Details extends React.Component {
           // } = value.detailProduct;
           // console.log(value.detailProduct);
           // console.log(image);
+
           return (
             <section className="details">
               <div className="details-center">
